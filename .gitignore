@@ -1,0 +1,26 @@
+# Virtual environment & caches
+.venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.ruff_cache/
+.mypy_cache/
+.coverage
+htmlcov/
+
+# PyInstaller & Build artifacts
+*.exe
+build/
+dist/
+cachedir/
+*.spec.bak
+
+# Datasets & local large files
+data/raw/cert/r3.1/
+data/raw/cert/r4.2/
+data/interim/
+checkpoints/
+
+# Local logs & environment
+.env
+*.log

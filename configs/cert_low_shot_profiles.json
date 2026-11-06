@@ -1,0 +1,26 @@
+[
+  {
+    "scenario": 1,
+    "name": "USB и веб-эксфильтрация",
+    "techniques": ["T1052.001", "T1041"],
+    "features": ["after_hours_events", "device_connect", "file_events", "file_content_chars", "http_events", "http_leak_site"]
+  },
+  {
+    "scenario": 2,
+    "name": "Поиск работы и кража через USB",
+    "techniques": ["T1052.001", "T1041"],
+    "features": ["http_events", "http_job_search", "device_connect", "device_events", "file_events", "file_content_chars"]
+  },
+  {
+    "scenario": 3,
+    "name": "Компрометация учётной записи и массовая почта",
+    "techniques": ["T1056.001", "T1078", "T1114"],
+    "features": ["device_connect", "file_events", "logon_events", "logon_count", "email_events", "email_external", "email_size"]
+  },
+  {
+    "scenario": 4,
+    "name": "Поиск файлов и вывод через внешнюю почту",
+    "techniques": ["T1078", "T1083", "T1114"],
+    "features": ["logon_events", "file_events", "file_content_chars", "email_events", "email_external", "email_size", "email_attachments"]
+  }
+]

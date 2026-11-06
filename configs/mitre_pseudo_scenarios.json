@@ -1,0 +1,8 @@
+[
+  {"id":"T1052.001","name":"usb_exfiltration","ru_name":"Эксфильтрация через USB","description":"Подготовка файлов и подключение съёмного носителя во внерабочее время.","features":["device_connect","file_events","file_content_chars","after_hours_events"]},
+  {"id":"T1078","name":"valid_account_after_hours","ru_name":"Легитимная учётная запись вне графика","description":"Нетипичная активность входа и работа с файлами во внерабочие часы.","features":["logon_events","logon_count","after_hours_events"]},
+  {"id":"T1041","name":"web_exfiltration","ru_name":"Эксфильтрация через веб-канал","description":"Рост веб-активности после подготовки данных.","features":["http_events","http_job_search","after_hours_events"]},
+  {"id":"T1114","name":"external_email_collection","ru_name":"Вывод данных через внешнюю почту","description":"Рост внешних писем, вложений и объёма почтового трафика.","features":["email_events","email_external","email_size","email_attachments"]},
+  {"id":"T1074","name":"data_staging","ru_name":"Подготовка данных к выводу","description":"Массовая обработка файлов перед переносом на устройство.","features":["file_events","file_content_chars","device_events"]},
+  {"id":"UEBA-BDU","name":"compound_insider_deviation","ru_name":"Комплексное внутреннее отклонение","description":"Комбинация ночной активности, USB, файлов и внешней почты.","features":["after_hours_events","device_connect","file_events","email_external"]}
+]
