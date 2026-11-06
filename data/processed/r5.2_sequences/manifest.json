@@ -1,0 +1,37 @@
+{
+  "sequence_length": 14,
+  "features": [
+    "logon_events",
+    "after_hours_events",
+    "weekend_events",
+    "logon_count",
+    "logoff_count",
+    "device_events",
+    "device_connect",
+    "file_events",
+    "file_content_chars",
+    "http_events",
+    "http_job_search",
+    "http_leak_site",
+    "email_events",
+    "email_external",
+    "email_size",
+    "email_attachments",
+    "day_of_week",
+    "month"
+  ],
+  "splits": {
+    "train": {
+      "sequences": 616540,
+      "anomalies": 740
+    },
+    "validation": {
+      "sequences": 113914,
+      "anomalies": 227
+    },
+    "test": {
+      "sequences": 216813,
+      "anomalies": 340
+    }
+  }
+}
