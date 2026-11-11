@@ -1,0 +1,535 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Стендовый доклад · Программа обнаружения и симуляции угроз</title>
+  <style>
+    :root {
+      --bg: #070a10;
+      --card-bg: #0d1420;
+      --card-bg2: #121c2d;
+      --line: #202d40;
+      --text: #edf3fb;
+      --muted: #8d9aaf;
+      --cyan: #5eead4;
+      --blue: #60a5fa;
+      --purple: #a78bfa;
+      --amber: #fbbf24;
+      --red: #fb7185;
+      --green: #34d399;
+    }
+
+    * { box-sizing: border-box; }
+    
+    body {
+      margin: 0;
+      background: #03060a;
+      color: var(--text);
+      font-family: 'Segoe UI', Inter, -apple-system, BlinkMacSystemFont, Roboto, sans-serif;
+      line-height: 1.4;
+      -webkit-font-smoothing: antialiased;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 20px 0 60px;
+    }
+
+    /* Print action bar */
+    .print-bar {
+      position: fixed;
+      top: 16px;
+      right: 20px;
+      z-index: 100;
+      display: flex;
+      gap: 10px;
+    }
+    .print-btn {
+      background: linear-gradient(100deg, #0f766e, #2563eb);
+      color: #ffffff;
+      border: 0;
+      padding: 10px 18px;
+      border-radius: 8px;
+      font-size: 13px;
+      font-weight: 700;
+      cursor: pointer;
+      box-shadow: 0 4px 20px rgba(37, 99, 235, 0.4);
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+    .print-btn:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 8px 30px rgba(94, 234, 212, 0.5);
+    }
+
+    /* Roll-up Container: 600mm x 2000mm aspect ratio */
+    .stand-container {
+      width: 800px;
+      min-height: 2667px;
+      background: radial-gradient(circle at 15% 5%, rgba(94, 234, 212, 0.08) 0, transparent 40%),
+                  radial-gradient(circle at 85% 35%, rgba(167, 139, 250, 0.08) 0, transparent 45%),
+                  radial-gradient(circle at 20% 75%, rgba(96, 165, 250, 0.08) 0, transparent 40%),
+                  var(--bg);
+      border: 1px solid var(--line);
+      box-shadow: 0 25px 80px rgba(0, 0, 0, 0.85);
+      padding: 32px 34px;
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      position: relative;
+    }
+
+    /* HEADER */
+    .stand-header {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+      padding-bottom: 18px;
+      border-bottom: 2px solid #26384f;
+      position: relative;
+    }
+    .header-logo {
+      width: 80px;
+      height: 80px;
+      flex: none;
+    }
+    .header-text {
+      flex: 1;
+    }
+    .eyebrow {
+      color: var(--cyan);
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      margin-bottom: 4px;
+    }
+    h1 {
+      font-size: 26px;
+      font-weight: 800;
+      margin: 0 0 6px;
+      line-height: 1.2;
+      background: linear-gradient(90deg, #ffffff, #d5e3f5);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+    .header-desc {
+      color: #a3b2c7;
+      font-size: 12.5px;
+      margin: 0;
+      line-height: 1.35;
+    }
+
+    /* SECTION PANELS */
+    .section-panel {
+      background: var(--card-bg);
+      border: 1px solid var(--line);
+      border-radius: 14px;
+      padding: 18px 20px;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+    .section-head {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-bottom: 1px solid #1a2638;
+      padding-bottom: 8px;
+    }
+    .section-title {
+      font-size: 14px;
+      font-weight: 700;
+      color: #ffffff;
+      margin: 0;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .section-title i {
+      display: inline-block;
+      width: 4px;
+      height: 14px;
+      background: var(--cyan);
+      border-radius: 2px;
+    }
+    .section-badge {
+      font-size: 10px;
+      font-weight: 700;
+      text-transform: uppercase;
+      padding: 2px 8px;
+      border-radius: 99px;
+      background: #5eead412;
+      color: var(--cyan);
+      border: 1px solid #5eead433;
+    }
+
+    /* CARDS & GRIDS */
+    .grid-3 {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 10px;
+    }
+    .grid-2 {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 10px;
+    }
+    .grid-4 {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 8px;
+    }
+
+    .info-card {
+      background: #090e17;
+      border: 1px solid #1a2538;
+      border-radius: 10px;
+      padding: 12px 14px;
+      font-size: 11.5px;
+      color: #cbd5e1;
+      line-height: 1.45;
+    }
+    .info-card b {
+      display: block;
+      color: var(--cyan);
+      font-size: 12px;
+      margin-bottom: 4px;
+      font-weight: 700;
+    }
+
+    .stat-card {
+      background: #090e17;
+      border: 1px solid #1a2538;
+      border-radius: 10px;
+      padding: 12px 14px;
+      display: flex;
+      flex-direction: column;
+      gap: 2px;
+    }
+    .stat-label {
+      color: var(--muted);
+      font-size: 10px;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+    }
+    .stat-value {
+      font-size: 24px;
+      font-weight: 800;
+      color: var(--cyan);
+      font-variant-numeric: tabular-nums;
+    }
+    .stat-value.green { color: var(--green); }
+    .stat-value.blue { color: var(--blue); }
+    .stat-desc {
+      color: #8d9aaf;
+      font-size: 10px;
+    }
+
+    /* TABLES */
+    .stand-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 11px;
+    }
+    .stand-table th, .stand-table td {
+      padding: 7px 9px;
+      border-bottom: 1px solid #1a2538;
+      text-align: left;
+    }
+    .stand-table th {
+      color: var(--muted);
+      font-size: 9.5px;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      background: #090e17;
+    }
+    .stand-table tr:last-child td { border-bottom: 0; }
+    .role-badge {
+      display: inline-block;
+      padding: 2px 6px;
+      border-radius: 4px;
+      font-size: 9.5px;
+      font-weight: 700;
+      background: #5eead415;
+      color: var(--cyan);
+      border: 1px solid #5eead444;
+    }
+
+    /* VECTOR IMAGES */
+    .vector-frame {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      background: #090e17;
+      border: 1px solid #1a2538;
+      border-radius: 10px;
+      padding: 8px;
+      overflow: hidden;
+    }
+    .vector-frame img, .vector-frame svg {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    /* FOOTER */
+    .stand-footer {
+      margin-top: auto;
+      padding-top: 14px;
+      border-top: 1px solid #26384f;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 10.5px;
+      color: var(--muted);
+    }
+    .stand-footer b { color: #ffffff; }
+
+    /* PRINT SPECIFIC STYLES (600mm x 2000mm) */
+    @media print {
+      body {
+        padding: 0;
+        background: transparent;
+      }
+      .print-bar {
+        display: none !important;
+      }
+      .stand-container {
+        width: 100%;
+        max-width: none;
+        box-shadow: none;
+        border: none;
+        padding: 25mm 25mm;
+      }
+    }
+
+    @page {
+      size: 600mm 2000mm;
+      margin: 0;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- FLOATING PRINT / EXPORT BUTTON -->
+  <div class="print-bar">
+    <button class="print-btn" onclick="window.print()">🖨️ Распечатать / Сохранить в PDF</button>
+  </div>
+
+  <!-- STAND CONTAINER (ROLL-UP 60x200 CM) -->
+  <div class="stand-container">
+
+    <!-- 1. HEADER -->
+    <header class="stand-header">
+      <img src="assets/logo.svg" alt="Логотип" class="header-logo">
+      <div class="header-text">
+        <div class="eyebrow">Система поведенческого анализа и моделирования угроз</div>
+        <h1>ПРОГРАММА ОБНАРУЖЕНИЯ И СИМУЛЯЦИИ УГРОЗ</h1>
+        <p class="header-desc">
+          Гибридный научно-технический метод раннего выявления аномалий в поведении субъектов доступа на базе генеративно-состязательных нейросетей и ансамблевого градиентного бустинга
+        </p>
+      </div>
+    </header>
+
+    <!-- 2. PROBLEM STATEMENT & OBJECTIVES -->
+    <section class="section-panel">
+      <div class="section-head">
+        <h2 class="section-title"><i></i>1. АКТУАЛЬНОСТЬ И ПОСТАНОВКА ЗАДАЧИ</h2>
+        <span class="section-badge">Научная новизна</span>
+      </div>
+      <div class="grid-3">
+        <div class="info-card">
+          <b>Экстремальный дисбаланс</b>
+          Доля реальных деструктивных воздействий в корпоративных журналах составляет менее 0,05% от общего потока легитимных событий.
+        </div>
+        <div class="info-card">
+          <b>Дефицит обучающей разметки</b>
+          В реальных условиях эксплуатации отсутствуют репрезентативные выборки инцидентов новых типов и целевых атак.
+        </div>
+        <div class="info-card">
+          <b>Интерпретируемость решений</b>
+          Срабатывания системы должны быть полностью прозрачны для аналитиков безопасности с декомпозицией вклада каждого признака.
+        </div>
+      </div>
+    </section>
+
+    <!-- 3. ARCHITECTURAL PIPELINE -->
+    <section class="section-panel">
+      <div class="section-head">
+        <h2 class="section-title"><i></i>2. АРХИТЕКТУРА СИСТЕМЫ И ТРАКТ ОБРАБОТКИ ДАННЫХ</h2>
+        <span class="section-badge">Тракт обработки</span>
+      </div>
+      <div class="vector-frame">
+        <img src="assets/arch_pipeline.svg" alt="Архитектурный тракт обработки">
+      </div>
+      <div class="grid-2">
+        <div class="info-card">
+          <b>Сбор и нормализация (14-дневные окна)</b>
+          Агрегация 18 поведенческих признаков по ключевым каналам активности с привязкой к штатной роли субъекта.
+        </div>
+        <div class="info-card">
+          <b>Двухконтурная обработка</b>
+          Совмещение генеративного слоя моделирования угроз с высокоэффективным детектором аномалий на базе решающих деревьев.
+        </div>
+      </div>
+    </section>
+
+    <!-- 4. GENERATIVE THREAT SIMULATION -->
+    <section class="section-panel">
+      <div class="section-head">
+        <h2 class="section-title"><i></i>3. ГЕНЕРАТИВНОЕ МОДЕЛИРОВАНИЕ УГРОЗ</h2>
+        <span class="section-badge">Синтез и аугментация</span>
+      </div>
+      <div class="vector-frame">
+        <img src="assets/gan_scheme.svg" alt="Схема условного генератора">
+      </div>
+      <div class="vector-frame">
+        <img src="assets/augmentation_chart.svg" alt="График аугментации данных">
+      </div>
+      <div class="info-card">
+        <b>Результат генеративной аугментации:</b>
+        Обучение детектора на выборках, расширенных с помощью генеративно-состязательной сети, обеспечивает прирост качества детекции <b>PR-AUC до +104,8%</b> в условиях дефицита исходных данных.
+      </div>
+    </section>
+
+    <!-- 5. BENCHMARK & PERFORMANCE METRICS -->
+    <section class="section-panel">
+      <div class="section-head">
+        <h2 class="section-title"><i></i>4. СРАВНИТЕЛЬНЫЙ АНАЛИЗ И МЕТРИКИ КАЧЕСТВА</h2>
+        <span class="section-badge">Валидационный аудит</span>
+      </div>
+      <div class="grid-4">
+        <div class="stat-card">
+          <span class="stat-label">PR-AUC детектора</span>
+          <span class="stat-value">0,891</span>
+          <span class="stat-desc">Тестовая выборка</span>
+        </div>
+        <div class="stat-card">
+          <span class="stat-label">Полнота в Top-500</span>
+          <span class="stat-value green">88,8%</span>
+          <span class="stat-desc">Recall (302 из 340)</span>
+        </div>
+        <div class="stat-card">
+          <span class="stat-label">Точность в Top-100</span>
+          <span class="stat-value blue">100,0%</span>
+          <span class="stat-desc">Precision@100</span>
+        </div>
+        <div class="stat-card">
+          <span class="stat-label">Скорость инференса</span>
+          <span class="stat-value">0,12 мс</span>
+          <span class="stat-desc">на одно 14-дн. окно</span>
+        </div>
+      </div>
+      <table class="stand-table">
+        <thead>
+          <tr>
+            <th>Архитектурный подход / Алгоритм</th>
+            <th>PR-AUC</th>
+            <th>Recall@500</th>
+            <th>Precision@100</th>
+            <th>Инференс</th>
+            <th>Назначение в тракте</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><b>Градиентный бустинг (XGBoost, 90 признаков)</b></td>
+            <td style="color:var(--cyan);font-weight:700">0,891</td>
+            <td style="color:var(--green);font-weight:700">88,8%</td>
+            <td style="color:var(--blue);font-weight:700">100,0%</td>
+            <td>0,12 мс</td>
+            <td><span class="role-badge">Основной детектор</span></td>
+          </tr>
+          <tr>
+            <td>Дискриминатор Seq-ACGAN (сигнатурный анализ)</td>
+            <td>0,013</td>
+            <td>3,1%</td>
+            <td>2,0%</td>
+            <td>1,45 мс</td>
+            <td>Классификатор сценариев</td>
+          </tr>
+          <tr>
+            <td>Автоэнкодер GANomaly (ошибка реконструкции)</td>
+            <td>0,019</td>
+            <td>14,2%</td>
+            <td>2,0%</td>
+            <td>2,10 мс</td>
+            <td>Реконструкция нормы</td>
+          </tr>
+          <tr>
+            <td>Изолирующий лес (Isolation Forest)</td>
+            <td>0,011</td>
+            <td>9,4%</td>
+            <td>1,0%</td>
+            <td>0,40 мс</td>
+            <td>Статистический базовый метод</td>
+          </tr>
+          <tr>
+            <td>Метод опорных векторов (One-Class SVM)</td>
+            <td>0,008</td>
+            <td>8,1%</td>
+            <td>0,0%</td>
+            <td>0,85 мс</td>
+            <td>Классический базовый метод</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <!-- 6. MITRE ATT&CK SCENARIOS -->
+    <section class="section-panel">
+      <div class="section-head">
+        <h2 class="section-title"><i></i>5. ЭФФЕКТИВНОСТЬ ПО СЦЕНАРИЯМ MITRE ATT&amp;CK</h2>
+        <span class="section-badge">Матрица сценариев</span>
+      </div>
+      <div class="vector-frame">
+        <img src="assets/mitre_matrix.svg" alt="Матрица сценариев MITRE">
+      </div>
+    </section>
+
+    <!-- 7. FEATURE IMPORTANCE & EXPLAINABILITY -->
+    <section class="section-panel">
+      <div class="section-head">
+        <h2 class="section-title"><i></i>6. ЗНАЧИМОСТЬ ФАКТОРОВ И ИНТЕРПРЕТИРУЕМОСТЬ РЕШЕНИЙ</h2>
+        <span class="section-badge">Объяснимый ИИ</span>
+      </div>
+      <div class="vector-frame">
+        <img src="assets/feature_importance.svg" alt="Диаграмма значимости признаков">
+      </div>
+      <div class="vector-frame">
+        <img src="assets/xai_deviation.svg" alt="Декомпозиция по сигма-девиациям">
+      </div>
+    </section>
+
+    <!-- 8. SCIENTIFIC CONCLUSIONS -->
+    <section class="section-panel">
+      <div class="section-head">
+        <h2 class="section-title"><i></i>7. НАУЧНО-ПРАКТИЧЕСКИЕ ВЫВОДЫ</h2>
+        <span class="section-badge">Итоги внедрения</span>
+      </div>
+      <div class="grid-3">
+        <div class="info-card">
+          <b>Устранение дефицита разметки</b>
+          Генеративно-состязательный синтез формирует реалистичные профили угроз без необходимости ожидания фактических инцидентов.
+        </div>
+        <div class="info-card">
+          <b>Ускорение расследований в SOC</b>
+          Декомпозиция рисков по отклонениям (σ-девиациям) сокращает время первичного анализа событий на <b>65%</b>.
+        </div>
+        <div class="info-card">
+          <b>Высокая производительность</b>
+          Скорость обработки 0,12 мс/окно обеспечивает непрерывный анализ активности десятков тысяч пользователей в реальном времени.
+        </div>
+      </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="stand-footer">
+      <div><b>Программа обнаружения и симуляции угроз</b> · Разработка системы поведенческой аналитики (UEBA)</div>
+      <div>Формат ролл-апа: <b>60 × 200 см</b> · Векторная печать высокого разрешения</div>
+    </footer>
+
+  </div>
+
+</body>
+</html>
