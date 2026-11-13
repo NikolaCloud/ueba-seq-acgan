@@ -1,0 +1,257 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1460 800" width="1460" height="800">
+  <defs>
+    <!-- Block Column Gradients -->
+    <linearGradient id="colGradNormal" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#141f32" />
+      <stop offset="100%" stop-color="#0b121e" />
+    </linearGradient>
+    <linearGradient id="colGradGan" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#22183c" />
+      <stop offset="100%" stop-color="#100b1e" />
+    </linearGradient>
+    <linearGradient id="colGradDetector" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#0e2338" />
+      <stop offset="100%" stop-color="#081420" />
+    </linearGradient>
+
+    <!-- Card Inner Gradients -->
+    <linearGradient id="cardGradInner" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#19273e" />
+      <stop offset="100%" stop-color="#0f1827" />
+    </linearGradient>
+
+    <!-- Shadows -->
+    <filter id="shadowClean" x="-8%" y="-8%" width="116%" height="116%">
+      <feDropShadow dx="0" dy="8" stdDeviation="10" flood-color="#000000" flood-opacity="0.6"/>
+    </filter>
+
+    <!-- Arrow Markers -->
+    <marker id="arrCyanClean" viewBox="0 0 10 10" refX="6" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M 0 1 L 10 5 L 0 9 z" fill="#38bdf8"/>
+    </marker>
+    <marker id="arrPurpleClean" viewBox="0 0 10 10" refX="6" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M 0 1 L 10 5 L 0 9 z" fill="#c084fc"/>
+    </marker>
+  </defs>
+
+  <!-- NO BACKGROUND RECT (Completely Transparent Canvas) -->
+
+  <!-- ================= STAGE 1: ИСТОЧНИКИ ДАННЫХ ================= -->
+  <g transform="translate(40, 35)">
+    <rect x="0" y="0" width="255" height="730" rx="18" fill="url(#colGradNormal)" stroke="#2b3d5c" stroke-width="2" filter="url(#shadowClean)"/>
+    
+    <!-- Stage Header -->
+    <rect x="0" y="0" width="255" height="66" rx="18" fill="#1b2a42"/>
+    <rect x="0" y="50" width="255" height="16" fill="#1b2a42"/>
+    <text x="127.5" y="42" fill="#38bdf8" font-family="'Segoe UI', Arial, sans-serif" font-size="16" font-weight="800" text-anchor="middle" letter-spacing="0.03em">1. ИСТОЧНИКИ ДАННЫХ</text>
+
+    <!-- Card 1.1 -->
+    <g transform="translate(16, 85)">
+      <rect x="0" y="0" width="223" height="195" rx="12" fill="url(#cardGradInner)" stroke="#2d3d5a" stroke-width="1.2"/>
+      <text x="16" y="34" fill="#ffffff" font-family="'Segoe UI', Arial, sans-serif" font-size="17" font-weight="800">Журналы событий</text>
+      <text x="16" y="68" fill="#94a3b8" font-family="'Segoe UI', Arial, sans-serif" font-size="14">Входы и выходы</text>
+      <text x="16" y="96" fill="#94a3b8" font-family="'Segoe UI', Arial, sans-serif" font-size="14">Внерабочая активность</text>
+      <text x="16" y="124" fill="#94a3b8" font-family="'Segoe UI', Arial, sans-serif" font-size="14">Подключения накопителей</text>
+      <text x="16" y="160" fill="#38bdf8" font-family="'Segoe UI', Arial, sans-serif" font-size="14.5" font-weight="700">Файлы, веб и почта</text>
+    </g>
+
+    <!-- Card 1.2 -->
+    <g transform="translate(16, 298)">
+      <rect x="0" y="0" width="223" height="195" rx="12" fill="url(#cardGradInner)" stroke="#2d3d5a" stroke-width="1.2"/>
+      <text x="16" y="34" fill="#ffffff" font-family="'Segoe UI', Arial, sans-serif" font-size="17" font-weight="800">Штатные роли</text>
+      <text x="16" y="68" fill="#94a3b8" font-family="'Segoe UI', Arial, sans-serif" font-size="14">Каталоги ролей LDAP</text>
+      <text x="16" y="96" fill="#94a3b8" font-family="'Segoe UI', Arial, sans-serif" font-size="14">Профиль обязанностей</text>
+      <text x="16" y="124" fill="#94a3b8" font-family="'Segoe UI', Arial, sans-serif" font-size="14">Штатное расписание</text>
+      <text x="16" y="160" fill="#38bdf8" font-family="'Segoe UI', Arial, sans-serif" font-size="14.5" font-weight="700">Ролевая привязка</text>
+    </g>
+
+    <!-- Card 1.3 -->
+    <g transform="translate(16, 510)">
+      <rect x="0" y="0" width="223" height="195" rx="12" fill="#13243a" stroke="#38bdf8" stroke-width="1.4"/>
+      <text x="16" y="34" fill="#ffffff" font-family="'Segoe UI', Arial, sans-serif" font-size="17" font-weight="800">Сбор телеметрии</text>
+      <text x="16" y="68" fill="#94a3b8" font-family="'Segoe UI', Arial, sans-serif" font-size="14">Потоковая агрегация логов</text>
+      <text x="16" y="96" fill="#94a3b8" font-family="'Segoe UI', Arial, sans-serif" font-size="14">Контроль целостности</text>
+      <rect x="14" y="118" width="195" height="52" rx="8" fill="#0c1b2c"/>
+      <text x="111.5" y="150" fill="#38bdf8" font-family="'Segoe UI', Arial, sans-serif" font-size="15" font-weight="800" text-anchor="middle">Центральный шлюз</text>
+    </g>
+  </g>
+
+  <!-- Flow Arrow 1 -> 2 -->
+  <path d="M 295 400 H 325" stroke="#38bdf8" stroke-width="3" fill="none" marker-end="url(#arrCyanClean)"/>
+
+  <!-- ================= STAGE 2: ВХОДНЫЕ ДАННЫЕ ================= -->
+  <g transform="translate(330, 35)">
+    <rect x="0" y="0" width="255" height="730" rx="18" fill="url(#colGradNormal)" stroke="#2b3d5c" stroke-width="2" filter="url(#shadowClean)"/>
+    
+    <!-- Stage Header -->
+    <rect x="0" y="0" width="255" height="66" rx="18" fill="#1b2a42"/>
+    <rect x="0" y="50" width="255" height="16" fill="#1b2a42"/>
+    <text x="127.5" y="42" fill="#38bdf8" font-family="'Segoe UI', Arial, sans-serif" font-size="16" font-weight="800" text-anchor="middle" letter-spacing="0.03em">2. ВХОДНЫЕ ДАННЫЕ</text>
+
+    <!-- Card 2.1 -->
+    <g transform="translate(16, 85)">
+      <rect x="0" y="0" width="223" height="195" rx="12" fill="#0f1a29" stroke="#38bdf8" stroke-width="1.6"/>
+      <text x="16" y="32" fill="#94a3b8" font-family="'Segoe UI', Arial, sans-serif" font-size="12.5" font-weight="700">ФОРМАТ ДАННЫХ</text>
+      <text x="16" y="66" fill="#ffffff" font-family="'Segoe UI', Arial, sans-serif" font-size="20" font-weight="800">Набор входных</text>
+      <text x="16" y="92" fill="#ffffff" font-family="'Segoe UI', Arial, sans-serif" font-size="20" font-weight="800">данных</text>
+      
+      <rect x="14" y="112" width="195" height="62" rx="8" fill="#13273e"/>
+      <text x="111.5" y="136" fill="#94a3b8" font-family="'Segoe UI', Arial, sans-serif" font-size="13" text-anchor="middle">Временной интервал:</text>
+      <text x="111.5" y="158" fill="#38bdf8" font-family="'Segoe UI', Arial, sans-serif" font-size="16" font-weight="800" text-anchor="middle">Скользящие 14 дней</text>
+    </g>
+
+    <!-- Card 2.2 -->
+    <g transform="translate(16, 298)">
+      <rect x="0" y="0" width="223" height="195" rx="12" fill="url(#cardGradInner)" stroke="#2d3d5a" stroke-width="1.2"/>
+      <text x="16" y="34" fill="#ffffff" font-family="'Segoe UI', Arial, sans-serif" font-size="17" font-weight="800">Нормализация</text>
+      <text x="16" y="68" fill="#94a3b8" font-family="'Segoe UI', Arial, sans-serif" font-size="14">Масштабирование частот</text>
+      <text x="16" y="96" fill="#94a3b8" font-family="'Segoe UI', Arial, sans-serif" font-size="14">Логарифмирование объема</text>
+      <text x="16" y="124" fill="#94a3b8" font-family="'Segoe UI', Arial, sans-serif" font-size="14">Сглаживание шумов</text>
+      <text x="16" y="160" fill="#38bdf8" font-family="'Segoe UI', Arial, sans-serif" font-size="14.5" font-weight="700">Устранение выбросов</text>
+    </g>
+
+    <!-- Card 2.3 -->
+    <g transform="translate(16, 510)">
+      <rect x="0" y="0" width="223" height="195" rx="12" fill="url(#cardGradInner)" stroke="#2d3d5a" stroke-width="1.2"/>
+      <text x="16" y="34" fill="#ffffff" font-family="'Segoe UI', Arial, sans-serif" font-size="17" font-weight="800">Векторы субъектов</text>
+      <text x="16" y="68" fill="#94a3b8" font-family="'Segoe UI', Arial, sans-serif" font-size="14">Привязка к профилю</text>
+      <text x="16" y="96" fill="#94a3b8" font-family="'Segoe UI', Arial, sans-serif" font-size="14">Готовность к инференсу</text>
+      <text x="16" y="124" fill="#94a3b8" font-family="'Segoe UI', Arial, sans-serif" font-size="14">Контекст активности</text>
+      <text x="16" y="160" fill="#2dd4bf" font-family="'Segoe UI', Arial, sans-serif" font-size="14.5" font-weight="700">Структурированный поток</text>
+    </g>
+  </g>
+
+  <!-- Flow Arrow 2 -> 3 -->
+  <path d="M 585 400 H 615" stroke="#c084fc" stroke-width="3" fill="none" marker-end="url(#arrPurpleClean)"/>
+
+  <!-- ================= STAGE 3: СИНТЕЗ УГРОЗ ================= -->
+  <g transform="translate(620, 35)">
+    <rect x="0" y="0" width="265" height="730" rx="18" fill="url(#colGradGan)" stroke="#7c3aed" stroke-width="2" filter="url(#shadowClean)"/>
+    
+    <!-- Stage Header -->
+    <rect x="0" y="0" width="265" height="66" rx="18" fill="#2c1a4d"/>
+    <rect x="0" y="50" width="265" height="16" fill="#2c1a4d"/>
+    <text x="132.5" y="42" fill="#c084fc" font-family="'Segoe UI', Arial, sans-serif" font-size="16" font-weight="800" text-anchor="middle" letter-spacing="0.03em">3. СИНТЕЗ УГРОЗ</text>
+
+    <!-- Card 3.1 -->
+    <g transform="translate(16, 85)">
+      <rect x="0" y="0" width="233" height="195" rx="12" fill="#1b122e" stroke="#a855f7" stroke-width="1.4"/>
+      <text x="16" y="34" fill="#ffffff" font-family="'Segoe UI', Arial, sans-serif" font-size="17" font-weight="800">Генератор нормы</text>
+      <text x="16" y="68" fill="#d8b4fe" font-family="'Segoe UI', Arial, sans-serif" font-size="14">Условная нейросеть</text>
+      <text x="16" y="96" fill="#94a3b8" font-family="'Segoe UI', Arial, sans-serif" font-size="14">Синтез профилей субъектов</text>
+      <text x="16" y="124" fill="#94a3b8" font-family="'Segoe UI', Arial, sans-serif" font-size="14">по штатным ролям</text>
+      <text x="16" y="160" fill="#c084fc" font-family="'Segoe UI', Arial, sans-serif" font-size="14.5" font-weight="700">Реалистичное поведение</text>
+    </g>
+
+    <!-- Card 3.2 -->
+    <g transform="translate(16, 298)">
+      <rect x="0" y="0" width="233" height="195" rx="12" fill="#261220" stroke="#f43f5e" stroke-width="1.4"/>
+      <text x="16" y="34" fill="#ffffff" font-family="'Segoe UI', Arial, sans-serif" font-size="17" font-weight="800">Инъекция атак</text>
+      <text x="16" y="68" fill="#fda4af" font-family="'Segoe UI', Arial, sans-serif" font-size="14">Сценарии MITRE ATT&amp;CK</text>
+      <text x="16" y="96" fill="#94a3b8" font-family="'Segoe UI', Arial, sans-serif" font-size="14">Утечки USB и файлы</text>
+      <text x="16" y="124" fill="#94a3b8" font-family="'Segoe UI', Arial, sans-serif" font-size="14">Скрытая почта и входы</text>
+      <text x="16" y="160" fill="#fb7185" font-family="'Segoe UI', Arial, sans-serif" font-size="14.5" font-weight="700">Управляемая сила</text>
+    </g>
+
+    <!-- Card 3.3 -->
+    <g transform="translate(16, 510)">
+      <rect x="0" y="0" width="233" height="195" rx="12" fill="#132334" stroke="#2dd4bf" stroke-width="1.8"/>
+      <text x="16" y="34" fill="#ffffff" font-family="'Segoe UI', Arial, sans-serif" font-size="17" font-weight="800">Обогащение данных</text>
+      <text x="16" y="64" fill="#94a3b8" font-family="'Segoe UI', Arial, sans-serif" font-size="13.5">Прирост качества детекции:</text>
+      
+      <rect x="14" y="78" width="205" height="54" rx="8" fill="#082f49"/>
+      <text x="116.5" y="116" fill="#2dd4bf" font-family="'Segoe UI', Arial, sans-serif" font-size="30" font-weight="800" text-anchor="middle">+104,8%</text>
+
+      <text x="16" y="158" fill="#2dd4bf" font-family="'Segoe UI', Arial, sans-serif" font-size="14" font-weight="700">Обучение без ожидания атак</text>
+    </g>
+  </g>
+
+  <!-- Flow Arrow 3 -> 4 -->
+  <path d="M 885 400 H 915" stroke="#38bdf8" stroke-width="3" fill="none" marker-end="url(#arrCyanClean)"/>
+
+  <!-- ================= STAGE 4: ДЕТЕКТОР АНОМАЛИЙ ================= -->
+  <g transform="translate(920, 35)">
+    <rect x="0" y="0" width="265" height="730" rx="18" fill="url(#colGradDetector)" stroke="#0284c7" stroke-width="2" filter="url(#shadowClean)"/>
+    
+    <!-- Stage Header -->
+    <rect x="0" y="0" width="265" height="66" rx="18" fill="#0d263e"/>
+    <rect x="0" y="50" width="265" height="16" fill="#0d263e"/>
+    <text x="132.5" y="42" fill="#38bdf8" font-family="'Segoe UI', Arial, sans-serif" font-size="16" font-weight="800" text-anchor="middle" letter-spacing="0.03em">4. ДЕТЕКТОР АНОМАЛИЙ</text>
+
+    <!-- Card 4.1 -->
+    <g transform="translate(16, 85)">
+      <rect x="0" y="0" width="233" height="195" rx="12" fill="#0d1828" stroke="#38bdf8" stroke-width="1.4"/>
+      <text x="16" y="34" fill="#ffffff" font-family="'Segoe UI', Arial, sans-serif" font-size="17" font-weight="800">Градиентный бустинг</text>
+      <text x="16" y="68" fill="#94a3b8" font-family="'Segoe UI', Arial, sans-serif" font-size="14">Ансамбль деревьев</text>
+      <text x="16" y="96" fill="#94a3b8" font-family="'Segoe UI', Arial, sans-serif" font-size="14">Высокая точность анализа</text>
+      <text x="16" y="124" fill="#94a3b8" font-family="'Segoe UI', Arial, sans-serif" font-size="14">Скорость обработки:</text>
+      <text x="16" y="160" fill="#2dd4bf" font-family="'Segoe UI', Arial, sans-serif" font-size="16" font-weight="800">0,12 мс / окно</text>
+    </g>
+
+    <!-- Card 4.2 -->
+    <g transform="translate(16, 298)">
+      <rect x="0" y="0" width="233" height="195" rx="12" fill="url(#cardGradInner)" stroke="#2d3d5a" stroke-width="1.2"/>
+      <text x="16" y="34" fill="#ffffff" font-family="'Segoe UI', Arial, sans-serif" font-size="17" font-weight="800">Вектор детекции</text>
+      <text x="16" y="70" fill="#38bdf8" font-family="'Segoe UI', Arial, sans-serif" font-size="20" font-weight="800">90 признаков</text>
+      <text x="16" y="100" fill="#94a3b8" font-family="'Segoe UI', Arial, sans-serif" font-size="14">Суточный срез активности</text>
+      <text x="16" y="128" fill="#94a3b8" font-family="'Segoe UI', Arial, sans-serif" font-size="14">Средние значения и тренды</text>
+      <text x="16" y="160" fill="#38bdf8" font-family="'Segoe UI', Arial, sans-serif" font-size="14" font-weight="700">Статистические девиации</text>
+    </g>
+
+    <!-- Card 4.3 -->
+    <g transform="translate(16, 510)">
+      <rect x="0" y="0" width="233" height="195" rx="12" fill="#081e14" stroke="#22c55e" stroke-width="1.8"/>
+      <text x="16" y="34" fill="#ffffff" font-family="'Segoe UI', Arial, sans-serif" font-size="17" font-weight="800">Точность детекции</text>
+      
+      <rect x="14" y="52" width="205" height="52" rx="8" fill="#052e16"/>
+      <text x="26" y="84" fill="#86efac" font-family="'Segoe UI', Arial, sans-serif" font-size="14.5" font-weight="700">PR-AUC:</text>
+      <text x="195" y="86" fill="#22c55e" font-family="'Segoe UI', Arial, sans-serif" font-size="20" font-weight="800" text-anchor="end">0,891</text>
+
+      <rect x="14" y="116" width="205" height="52" rx="8" fill="#052e16"/>
+      <text x="26" y="148" fill="#86efac" font-family="'Segoe UI', Arial, sans-serif" font-size="14.5" font-weight="700">Recall:</text>
+      <text x="195" y="150" fill="#22c55e" font-family="'Segoe UI', Arial, sans-serif" font-size="20" font-weight="800" text-anchor="end">88,8%</text>
+    </g>
+  </g>
+
+  <!-- Flow Arrow 4 -> 5 -->
+  <path d="M 1185 400 H 1215" stroke="#38bdf8" stroke-width="3" fill="none" marker-end="url(#arrCyanClean)"/>
+
+  <!-- ================= STAGE 5: КОНТУР SOC ================= -->
+  <g transform="translate(1220, 35)">
+    <rect x="0" y="0" width="200" height="730" rx="18" fill="url(#colGradNormal)" stroke="#2b3d5c" stroke-width="2" filter="url(#shadowClean)"/>
+    
+    <!-- Stage Header -->
+    <rect x="0" y="0" width="200" height="66" rx="18" fill="#1b2a42"/>
+    <rect x="0" y="50" width="200" height="16" fill="#1b2a42"/>
+    <text x="100" y="42" fill="#38bdf8" font-family="'Segoe UI', Arial, sans-serif" font-size="15.5" font-weight="800" text-anchor="middle" letter-spacing="0.03em">5. КОНТУР SOC</text>
+
+    <!-- Card 5.1 -->
+    <g transform="translate(14, 85)">
+      <rect x="0" y="0" width="172" height="195" rx="12" fill="url(#cardGradInner)" stroke="#2d3d5a" stroke-width="1.2"/>
+      <text x="14" y="34" fill="#ffffff" font-family="'Segoe UI', Arial, sans-serif" font-size="16.5" font-weight="800">Рейтинг риска</text>
+      <text x="14" y="68" fill="#38bdf8" font-family="'Segoe UI', Arial, sans-serif" font-size="16" font-weight="800">Шкала 0 - 100</text>
+      <text x="14" y="102" fill="#94a3b8" font-family="'Segoe UI', Arial, sans-serif" font-size="13.5">Сортировка угроз</text>
+      <text x="14" y="146" fill="#ffffff" font-family="'Segoe UI', Arial, sans-serif" font-size="14" font-weight="700">Приоритизация</text>
+    </g>
+
+    <!-- Card 5.2 -->
+    <g transform="translate(14, 298)">
+      <rect x="0" y="0" width="172" height="195" rx="12" fill="url(#cardGradInner)" stroke="#2d3d5a" stroke-width="1.2"/>
+      <text x="14" y="34" fill="#ffffff" font-family="'Segoe UI', Arial, sans-serif" font-size="16.5" font-weight="800">Порог отсечки</text>
+      <text x="14" y="68" fill="#94a3b8" font-family="'Segoe UI', Arial, sans-serif" font-size="13.5">Калибровка отсечки</text>
+      <text x="14" y="102" fill="#94a3b8" font-family="'Segoe UI', Arial, sans-serif" font-size="13.5">Количество аналитиков</text>
+      <text x="14" y="146" fill="#38bdf8" font-family="'Segoe UI', Arial, sans-serif" font-size="14" font-weight="700">Фильтрация шума</text>
+    </g>
+
+    <!-- Card 5.3 -->
+    <g transform="translate(14, 510)">
+      <rect x="0" y="0" width="172" height="195" rx="12" fill="#13263c" stroke="#38bdf8" stroke-width="1.4"/>
+      <text x="14" y="34" fill="#ffffff" font-family="'Segoe UI', Arial, sans-serif" font-size="16" font-weight="800">Объяснимый ИИ</text>
+      <text x="14" y="66" fill="#94a3b8" font-family="'Segoe UI', Arial, sans-serif" font-size="13">Факторы риска</text>
+      <text x="14" y="90" fill="#94a3b8" font-family="'Segoe UI', Arial, sans-serif" font-size="13">σ-девиации</text>
+      <rect x="12" y="112" width="148" height="60" rx="8" fill="#0c1b2c"/>
+      <text x="86" y="136" fill="#ffffff" font-family="'Segoe UI', Arial, sans-serif" font-size="13.5" font-weight="700" text-anchor="middle">Карточка</text>
+      <text x="86" y="158" fill="#38bdf8" font-family="'Segoe UI', Arial, sans-serif" font-size="14" font-weight="800" text-anchor="middle">инцидента</text>
+    </g>
+  </g>
+</svg>

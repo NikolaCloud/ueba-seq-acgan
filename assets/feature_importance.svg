@@ -1,0 +1,46 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 230" width="760" height="230">
+  <defs>
+    <linearGradient id="fiGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#5eead4" />
+      <stop offset="100%" stop-color="#3b82f6" />
+    </linearGradient>
+  </defs>
+
+  <rect x="0" y="0" width="760" height="230" rx="14" fill="#0c121d" stroke="#222f42" stroke-width="1.5"/>
+
+  <!-- Row 1: USB (28.4%) -->
+  <text x="25" y="32" fill="#edf3fb" font-family="'Segoe UI', Arial, sans-serif" font-size="12" font-weight="600">1. Подключения съемных носителей информации</text>
+  <text x="735" y="32" fill="#5eead4" font-family="'Segoe UI', Arial, sans-serif" font-size="13" font-weight="700" text-anchor="end">28,4%</text>
+  <rect x="25" y="38" width="710" height="6" rx="3" fill="#1c2738"/>
+  <rect x="25" y="38" width="201" height="6" rx="3" fill="url(#fiGrad)"/>
+
+  <!-- Row 2: After hours (22.1%) -->
+  <text x="25" y="68" fill="#edf3fb" font-family="'Segoe UI', Arial, sans-serif" font-size="12" font-weight="600">2. Активность пользователя во внерабочее время</text>
+  <text x="735" y="68" fill="#5eead4" font-family="'Segoe UI', Arial, sans-serif" font-size="13" font-weight="700" text-anchor="end">22,1%</text>
+  <rect x="25" y="74" width="710" height="6" rx="3" fill="#1c2738"/>
+  <rect x="25" y="74" width="157" height="6" rx="3" fill="url(#fiGrad)"/>
+
+  <!-- Row 3: Files (18.7%) -->
+  <text x="25" y="104" fill="#edf3fb" font-family="'Segoe UI', Arial, sans-serif" font-size="12" font-weight="600">3. Число операций с файлами и объем содержимого</text>
+  <text x="735" y="104" fill="#5eead4" font-family="'Segoe UI', Arial, sans-serif" font-size="13" font-weight="700" text-anchor="end">18,7%</text>
+  <rect x="25" y="110" width="710" height="6" rx="3" fill="#1c2738"/>
+  <rect x="25" y="110" width="133" height="6" rx="3" fill="url(#fiGrad)"/>
+
+  <!-- Row 4: External Email (14.2%) -->
+  <text x="25" y="140" fill="#edf3fb" font-family="'Segoe UI', Arial, sans-serif" font-size="12" font-weight="600">4. Почтовая переписка с внешними адресатами</text>
+  <text x="735" y="140" fill="#5eead4" font-family="'Segoe UI', Arial, sans-serif" font-size="13" font-weight="700" text-anchor="end">14,2%</text>
+  <rect x="25" y="146" width="710" height="6" rx="3" fill="#1c2738"/>
+  <rect x="25" y="146" width="101" height="6" rx="3" fill="url(#fiGrad)"/>
+
+  <!-- Row 5: Web HTTP (9.8%) -->
+  <text x="25" y="176" fill="#edf3fb" font-family="'Segoe UI', Arial, sans-serif" font-size="12" font-weight="600">5. Аномалии структуры сетевых веб-запросов</text>
+  <text x="735" y="176" fill="#5eead4" font-family="'Segoe UI', Arial, sans-serif" font-size="13" font-weight="700" text-anchor="end">9,8%</text>
+  <rect x="25" y="182" width="710" height="6" rx="3" fill="#1c2738"/>
+  <rect x="25" y="182" width="70" height="6" rx="3" fill="url(#fiGrad)"/>
+
+  <!-- Row 6: Logon (6.8%) -->
+  <text x="25" y="210" fill="#edf3fb" font-family="'Segoe UI', Arial, sans-serif" font-size="12" font-weight="600">6. Входы в систему в нетипичные дни недели</text>
+  <text x="735" y="210" fill="#5eead4" font-family="'Segoe UI', Arial, sans-serif" font-size="13" font-weight="700" text-anchor="end">6,8%</text>
+  <rect x="25" y="216" width="710" height="6" rx="3" fill="#1c2738"/>
+  <rect x="25" y="216" width="48" height="6" rx="3" fill="url(#fiGrad)"/>
+</svg>
