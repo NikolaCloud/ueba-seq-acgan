@@ -1,0 +1,33 @@
+{
+  "method": "strict normal-only sequential GANomaly",
+  "observed_anomaly_labels_used_for_training_or_calibration": false,
+  "score": "0.60 latent inconsistency + 0.30 reconstruction deviation + 0.10 discriminator normality",
+  "normal_training_quantiles": {
+    "reconstruction": {
+      "median": 0.047234561294317245,
+      "p99": 0.24034887552261353
+    },
+    "latent": {
+      "median": 0.007057306822389364,
+      "p99": 0.07390767335891724
+    },
+    "critic": {
+      "median": -0.7702212929725647,
+      "p99": -0.14312361180782318
+    }
+  },
+  "validation": {
+    "pr_auc": 0.006203643573229152,
+    "roc_auc": 0.7130675540142308,
+    "precision_at_100": 0.01,
+    "recall_at_100": 0.004405286343612335,
+    "recall_at_500": 0.022026431718061675
+  },
+  "test": {
+    "pr_auc": 0.003564181426068386,
+    "roc_auc": 0.7706574940333545,
+    "precision_at_100": 0.0,
+    "recall_at_100": 0.0,
+    "recall_at_500": 0.008823529411764706
+  }
+}

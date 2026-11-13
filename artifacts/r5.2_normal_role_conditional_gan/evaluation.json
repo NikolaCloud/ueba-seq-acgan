@@ -1,0 +1,20 @@
+{
+  "method": "strict normal-only LDAP-role personalised conditional forecasting GAN",
+  "observed_anomaly_labels_used_for_training_or_calibration": false,
+  "validation": {
+    "pr_auc": 0.005994310819642314,
+    "roc_auc": 0.8261213287940391,
+    "precision_at_100": 0.0,
+    "recall_at_100": 0.0,
+    "recall_at_500": 0.004405286343612335
+  },
+  "test": {
+    "pr_auc": 0.01046323067267257,
+    "roc_auc": 0.913178365404081,
+    "precision_at_100": 0.01,
+    "recall_at_100": 0.0029411764705882353,
+    "recall_at_500": 0.008823529411764706
+  },
+  "unknown_user_codes_test": 0,
+  "unknown_role_codes_test": 0
+}

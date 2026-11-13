@@ -1,0 +1,77 @@
+{
+  "scope": "read-only audit; labels used only for reporting",
+  "test_scenarios": {
+    "1": {
+      "events": 33,
+      "mean_score": 0.748554963756916,
+      "recall_at_100": 0.030303030303030304,
+      "recall_at_500": 0.09090909090909091,
+      "top_residual_features": [
+        "after_hours_events",
+        "http_leak_site",
+        "file_content_chars"
+      ]
+    },
+    "2": {
+      "events": 103,
+      "mean_score": 0.4598642407970852,
+      "recall_at_100": 0.0,
+      "recall_at_500": 0.0,
+      "top_residual_features": [
+        "file_content_chars",
+        "http_job_search",
+        "file_events"
+      ]
+    },
+    "3": {
+      "events": 8,
+      "mean_score": 0.7970392256975174,
+      "recall_at_100": 0.0,
+      "recall_at_500": 0.0,
+      "top_residual_features": [
+        "after_hours_events",
+        "logoff_count",
+        "logon_count"
+      ]
+    },
+    "4": {
+      "events": 196,
+      "mean_score": 0.6901198233469449,
+      "recall_at_100": 0.0,
+      "recall_at_500": 0.0,
+      "top_residual_features": [
+        "file_content_chars",
+        "file_events",
+        "logoff_count"
+      ]
+    }
+  },
+  "top_500": {
+    "true_anomalies": 3,
+    "false_positive_role_counts": {
+      "Salesman": 92,
+      "Technician": 63,
+      "ITAdmin": 58,
+      "ProductionLineWorker": 48,
+      "Mathematician": 31,
+      "Physicist": 20,
+      "ElectricalEngineer": 18,
+      "SecurityGuard": 18,
+      "Manager": 17,
+      "AdministrativeAssistant": 15,
+      "TechnicalWriter": 11,
+      "SoftwareDeveloper": 11,
+      "MechanicalEngineer": 10,
+      "HardwareEngineer": 9,
+      "Scientist": 9
+    },
+    "false_positive_top_residual_features": [
+      "logon_count",
+      "logoff_count",
+      "logon_events",
+      "email_size",
+      "email_events"
+    ],
+    "unknown_user_codes": 0
+  }
+}

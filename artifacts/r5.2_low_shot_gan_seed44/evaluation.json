@@ -1,0 +1,753 @@
+{
+  "protocol": "train-only few-shot anomalies; GAN/MITRE augmentation; unchanged validation evaluation",
+  "device": "cpu",
+  "seed": 44,
+  "results": [
+    {
+      "real_anomalies_per_scenario": 1,
+      "real_anomalies_total": 4,
+      "normal_training_windows": 50000,
+      "synthetic_training_windows": 4000,
+      "synthetic_positive_weight_share": 0.25,
+      "without_augmentation": {
+        "samples": 113914,
+        "anomalies": 227,
+        "pr_auc": 0.009323637265806383,
+        "roc_auc": 0.8124423580641013,
+        "recall_at_50": 0.004405286343612335,
+        "precision_at_50": 0.02,
+        "recall_at_100": 0.004405286343612335,
+        "precision_at_100": 0.01,
+        "recall_at_500": 0.05286343612334802,
+        "precision_at_500": 0.024
+      },
+      "with_gan_mitre_augmentation": {
+        "samples": 113914,
+        "anomalies": 227,
+        "pr_auc": 0.01532034589592503,
+        "roc_auc": 0.9376313333280891,
+        "recall_at_50": 0.0,
+        "precision_at_50": 0.0,
+        "recall_at_100": 0.004405286343612335,
+        "precision_at_100": 0.01,
+        "recall_at_500": 0.02643171806167401,
+        "precision_at_500": 0.012
+      },
+      "relative_pr_auc_gain": 0.643172665254905,
+      "scenario_recall_without": {
+        "1": {
+          "events": 6,
+          "recall_at_100": 0.0,
+          "recall_at_500": 0.16666666666666666
+        },
+        "2": {
+          "events": 162,
+          "recall_at_100": 0.0,
+          "recall_at_500": 0.043209876543209874
+        },
+        "3": {
+          "events": 2,
+          "recall_at_100": 0.5,
+          "recall_at_500": 0.5
+        },
+        "4": {
+          "events": 57,
+          "recall_at_100": 0.0,
+          "recall_at_500": 0.05263157894736842
+        }
+      },
+      "scenario_recall_with": {
+        "1": {
+          "events": 6,
+          "recall_at_100": 0.16666666666666666,
+          "recall_at_500": 0.16666666666666666
+        },
+        "2": {
+          "events": 162,
+          "recall_at_100": 0.0,
+          "recall_at_500": 0.018518518518518517
+        },
+        "3": {
+          "events": 2,
+          "recall_at_100": 0.0,
+          "recall_at_500": 0.5
+        },
+        "4": {
+          "events": 57,
+          "recall_at_100": 0.0,
+          "recall_at_500": 0.017543859649122806
+        }
+      },
+      "synthetic_quality": {
+        "1": {
+          "name": "USB \u0438 \u0432\u0435\u0431-\u044d\u043a\u0441\u0444\u0438\u043b\u044c\u0442\u0440\u0430\u0446\u0438\u044f",
+          "techniques": [
+            "T1052.001",
+            "T1041"
+          ],
+          "samples": 1000,
+          "mean_mitre_probability": 0.45926275849342346,
+          "mean_feature_std": 101.02753448486328,
+          "distinct_final_days": 1000
+        },
+        "2": {
+          "name": "\u041f\u043e\u0438\u0441\u043a \u0440\u0430\u0431\u043e\u0442\u044b \u0438 \u043a\u0440\u0430\u0436\u0430 \u0447\u0435\u0440\u0435\u0437 USB",
+          "techniques": [
+            "T1052.001",
+            "T1041"
+          ],
+          "samples": 1000,
+          "mean_mitre_probability": 0.7322066426277161,
+          "mean_feature_std": 3.0496060848236084,
+          "distinct_final_days": 1000
+        },
+        "3": {
+          "name": "\u041a\u043e\u043c\u043f\u0440\u043e\u043c\u0435\u0442\u0430\u0446\u0438\u044f \u0443\u0447\u0451\u0442\u043d\u043e\u0439 \u0437\u0430\u043f\u0438\u0441\u0438 \u0438 \u043c\u0430\u0441\u0441\u043e\u0432\u0430\u044f \u043f\u043e\u0447\u0442\u0430",
+          "techniques": [
+            "T1056.001",
+            "T1078",
+            "T1114"
+          ],
+          "samples": 1000,
+          "mean_mitre_probability": 0.8422421813011169,
+          "mean_feature_std": 1898773.75,
+          "distinct_final_days": 1000
+        },
+        "4": {
+          "name": "\u041f\u043e\u0438\u0441\u043a \u0444\u0430\u0439\u043b\u043e\u0432 \u0438 \u0432\u044b\u0432\u043e\u0434 \u0447\u0435\u0440\u0435\u0437 \u0432\u043d\u0435\u0448\u043d\u044e\u044e \u043f\u043e\u0447\u0442\u0443",
+          "techniques": [
+            "T1078",
+            "T1083",
+            "T1114"
+          ],
+          "samples": 1000,
+          "mean_mitre_probability": 0.7160723805427551,
+          "mean_feature_std": 1919433.25,
+          "distinct_final_days": 1000
+        }
+      }
+    },
+    {
+      "real_anomalies_per_scenario": 3,
+      "real_anomalies_total": 12,
+      "normal_training_windows": 50000,
+      "synthetic_training_windows": 4000,
+      "synthetic_positive_weight_share": 0.25,
+      "without_augmentation": {
+        "samples": 113914,
+        "anomalies": 227,
+        "pr_auc": 0.03657685157305109,
+        "roc_auc": 0.9549955130302308,
+        "recall_at_50": 0.00881057268722467,
+        "precision_at_50": 0.04,
+        "recall_at_100": 0.013215859030837005,
+        "precision_at_100": 0.03,
+        "recall_at_500": 0.16740088105726872,
+        "precision_at_500": 0.076
+      },
+      "with_gan_mitre_augmentation": {
+        "samples": 113914,
+        "anomalies": 227,
+        "pr_auc": 0.04505426153734229,
+        "roc_auc": 0.9658467570110673,
+        "recall_at_50": 0.013215859030837005,
+        "precision_at_50": 0.06,
+        "recall_at_100": 0.048458149779735685,
+        "precision_at_100": 0.11,
+        "recall_at_500": 0.12334801762114538,
+        "precision_at_500": 0.056
+      },
+      "relative_pr_auc_gain": 0.23176981067821423,
+      "scenario_recall_without": {
+        "1": {
+          "events": 6,
+          "recall_at_100": 0.0,
+          "recall_at_500": 0.0
+        },
+        "2": {
+          "events": 162,
+          "recall_at_100": 0.006172839506172839,
+          "recall_at_500": 0.2037037037037037
+        },
+        "3": {
+          "events": 2,
+          "recall_at_100": 0.5,
+          "recall_at_500": 0.5
+        },
+        "4": {
+          "events": 57,
+          "recall_at_100": 0.017543859649122806,
+          "recall_at_500": 0.07017543859649122
+        }
+      },
+      "scenario_recall_with": {
+        "1": {
+          "events": 6,
+          "recall_at_100": 0.16666666666666666,
+          "recall_at_500": 0.3333333333333333
+        },
+        "2": {
+          "events": 162,
+          "recall_at_100": 0.05555555555555555,
+          "recall_at_500": 0.09876543209876543
+        },
+        "3": {
+          "events": 2,
+          "recall_at_100": 0.0,
+          "recall_at_500": 0.5
+        },
+        "4": {
+          "events": 57,
+          "recall_at_100": 0.017543859649122806,
+          "recall_at_500": 0.15789473684210525
+        }
+      },
+      "synthetic_quality": {
+        "1": {
+          "name": "USB \u0438 \u0432\u0435\u0431-\u044d\u043a\u0441\u0444\u0438\u043b\u044c\u0442\u0440\u0430\u0446\u0438\u044f",
+          "techniques": [
+            "T1052.001",
+            "T1041"
+          ],
+          "samples": 1000,
+          "mean_mitre_probability": 0.9560626149177551,
+          "mean_feature_std": 320.0043029785156,
+          "distinct_final_days": 989
+        },
+        "2": {
+          "name": "\u041f\u043e\u0438\u0441\u043a \u0440\u0430\u0431\u043e\u0442\u044b \u0438 \u043a\u0440\u0430\u0436\u0430 \u0447\u0435\u0440\u0435\u0437 USB",
+          "techniques": [
+            "T1052.001",
+            "T1041"
+          ],
+          "samples": 1000,
+          "mean_mitre_probability": 0.8951070308685303,
+          "mean_feature_std": 294.6785583496094,
+          "distinct_final_days": 1000
+        },
+        "3": {
+          "name": "\u041a\u043e\u043c\u043f\u0440\u043e\u043c\u0435\u0442\u0430\u0446\u0438\u044f \u0443\u0447\u0451\u0442\u043d\u043e\u0439 \u0437\u0430\u043f\u0438\u0441\u0438 \u0438 \u043c\u0430\u0441\u0441\u043e\u0432\u0430\u044f \u043f\u043e\u0447\u0442\u0430",
+          "techniques": [
+            "T1056.001",
+            "T1078",
+            "T1114"
+          ],
+          "samples": 1000,
+          "mean_mitre_probability": 0.8345088958740234,
+          "mean_feature_std": 1782890.375,
+          "distinct_final_days": 1000
+        },
+        "4": {
+          "name": "\u041f\u043e\u0438\u0441\u043a \u0444\u0430\u0439\u043b\u043e\u0432 \u0438 \u0432\u044b\u0432\u043e\u0434 \u0447\u0435\u0440\u0435\u0437 \u0432\u043d\u0435\u0448\u043d\u044e\u044e \u043f\u043e\u0447\u0442\u0443",
+          "techniques": [
+            "T1078",
+            "T1083",
+            "T1114"
+          ],
+          "samples": 1000,
+          "mean_mitre_probability": 0.7741362452507019,
+          "mean_feature_std": 1937869.25,
+          "distinct_final_days": 1000
+        }
+      }
+    },
+    {
+      "real_anomalies_per_scenario": 5,
+      "real_anomalies_total": 20,
+      "normal_training_windows": 50000,
+      "synthetic_training_windows": 4000,
+      "synthetic_positive_weight_share": 0.25,
+      "without_augmentation": {
+        "samples": 113914,
+        "anomalies": 227,
+        "pr_auc": 0.06390060386067777,
+        "roc_auc": 0.9657542625437822,
+        "recall_at_50": 0.04405286343612335,
+        "precision_at_50": 0.2,
+        "recall_at_100": 0.06607929515418502,
+        "precision_at_100": 0.15,
+        "recall_at_500": 0.16299559471365638,
+        "precision_at_500": 0.074
+      },
+      "with_gan_mitre_augmentation": {
+        "samples": 113914,
+        "anomalies": 227,
+        "pr_auc": 0.04344428785701133,
+        "roc_auc": 0.9726400629535867,
+        "recall_at_50": 0.02643171806167401,
+        "precision_at_50": 0.12,
+        "recall_at_100": 0.030837004405286344,
+        "precision_at_100": 0.07,
+        "recall_at_500": 0.05726872246696035,
+        "precision_at_500": 0.026
+      },
+      "relative_pr_auc_gain": -0.3201271156727605,
+      "scenario_recall_without": {
+        "1": {
+          "events": 6,
+          "recall_at_100": 0.0,
+          "recall_at_500": 0.0
+        },
+        "2": {
+          "events": 162,
+          "recall_at_100": 0.08024691358024691,
+          "recall_at_500": 0.20987654320987653
+        },
+        "3": {
+          "events": 2,
+          "recall_at_100": 1.0,
+          "recall_at_500": 1.0
+        },
+        "4": {
+          "events": 57,
+          "recall_at_100": 0.0,
+          "recall_at_500": 0.017543859649122806
+        }
+      },
+      "scenario_recall_with": {
+        "1": {
+          "events": 6,
+          "recall_at_100": 0.5,
+          "recall_at_500": 0.6666666666666666
+        },
+        "2": {
+          "events": 162,
+          "recall_at_100": 0.012345679012345678,
+          "recall_at_500": 0.043209876543209874
+        },
+        "3": {
+          "events": 2,
+          "recall_at_100": 0.5,
+          "recall_at_500": 0.5
+        },
+        "4": {
+          "events": 57,
+          "recall_at_100": 0.017543859649122806,
+          "recall_at_500": 0.017543859649122806
+        }
+      },
+      "synthetic_quality": {
+        "1": {
+          "name": "USB \u0438 \u0432\u0435\u0431-\u044d\u043a\u0441\u0444\u0438\u043b\u044c\u0442\u0440\u0430\u0446\u0438\u044f",
+          "techniques": [
+            "T1052.001",
+            "T1041"
+          ],
+          "samples": 1000,
+          "mean_mitre_probability": 0.8408007621765137,
+          "mean_feature_std": 274.4468688964844,
+          "distinct_final_days": 1000
+        },
+        "2": {
+          "name": "\u041f\u043e\u0438\u0441\u043a \u0440\u0430\u0431\u043e\u0442\u044b \u0438 \u043a\u0440\u0430\u0436\u0430 \u0447\u0435\u0440\u0435\u0437 USB",
+          "techniques": [
+            "T1052.001",
+            "T1041"
+          ],
+          "samples": 1000,
+          "mean_mitre_probability": 0.8344653248786926,
+          "mean_feature_std": 316.7216491699219,
+          "distinct_final_days": 1000
+        },
+        "3": {
+          "name": "\u041a\u043e\u043c\u043f\u0440\u043e\u043c\u0435\u0442\u0430\u0446\u0438\u044f \u0443\u0447\u0451\u0442\u043d\u043e\u0439 \u0437\u0430\u043f\u0438\u0441\u0438 \u0438 \u043c\u0430\u0441\u0441\u043e\u0432\u0430\u044f \u043f\u043e\u0447\u0442\u0430",
+          "techniques": [
+            "T1056.001",
+            "T1078",
+            "T1114"
+          ],
+          "samples": 1000,
+          "mean_mitre_probability": 0.8021560311317444,
+          "mean_feature_std": 1816725.375,
+          "distinct_final_days": 1000
+        },
+        "4": {
+          "name": "\u041f\u043e\u0438\u0441\u043a \u0444\u0430\u0439\u043b\u043e\u0432 \u0438 \u0432\u044b\u0432\u043e\u0434 \u0447\u0435\u0440\u0435\u0437 \u0432\u043d\u0435\u0448\u043d\u044e\u044e \u043f\u043e\u0447\u0442\u0443",
+          "techniques": [
+            "T1078",
+            "T1083",
+            "T1114"
+          ],
+          "samples": 1000,
+          "mean_mitre_probability": 0.8784334659576416,
+          "mean_feature_std": 2201838.25,
+          "distinct_final_days": 1000
+        }
+      }
+    },
+    {
+      "real_anomalies_per_scenario": 10,
+      "real_anomalies_total": 40,
+      "normal_training_windows": 50000,
+      "synthetic_training_windows": 4000,
+      "synthetic_positive_weight_share": 0.25,
+      "without_augmentation": {
+        "samples": 113914,
+        "anomalies": 227,
+        "pr_auc": 0.06141366300503241,
+        "roc_auc": 0.9669437096186768,
+        "recall_at_50": 0.00881057268722467,
+        "precision_at_50": 0.04,
+        "recall_at_100": 0.048458149779735685,
+        "precision_at_100": 0.11,
+        "recall_at_500": 0.0881057268722467,
+        "precision_at_500": 0.04
+      },
+      "with_gan_mitre_augmentation": {
+        "samples": 113914,
+        "anomalies": 227,
+        "pr_auc": 0.11051858533334541,
+        "roc_auc": 0.9852555410560155,
+        "recall_at_50": 0.030837004405286344,
+        "precision_at_50": 0.14,
+        "recall_at_100": 0.05726872246696035,
+        "precision_at_100": 0.13,
+        "recall_at_500": 0.28634361233480177,
+        "precision_at_500": 0.13
+      },
+      "relative_pr_auc_gain": 0.7995765099419195,
+      "scenario_recall_without": {
+        "1": {
+          "events": 6,
+          "recall_at_100": 0.0,
+          "recall_at_500": 0.0
+        },
+        "2": {
+          "events": 162,
+          "recall_at_100": 0.0,
+          "recall_at_500": 0.0
+        },
+        "3": {
+          "events": 2,
+          "recall_at_100": 0.0,
+          "recall_at_500": 1.0
+        },
+        "4": {
+          "events": 57,
+          "recall_at_100": 0.19298245614035087,
+          "recall_at_500": 0.3157894736842105
+        }
+      },
+      "scenario_recall_with": {
+        "1": {
+          "events": 6,
+          "recall_at_100": 0.3333333333333333,
+          "recall_at_500": 0.6666666666666666
+        },
+        "2": {
+          "events": 162,
+          "recall_at_100": 0.0,
+          "recall_at_500": 0.18518518518518517
+        },
+        "3": {
+          "events": 2,
+          "recall_at_100": 0.5,
+          "recall_at_500": 1.0
+        },
+        "4": {
+          "events": 57,
+          "recall_at_100": 0.17543859649122806,
+          "recall_at_500": 0.5087719298245614
+        }
+      },
+      "synthetic_quality": {
+        "1": {
+          "name": "USB \u0438 \u0432\u0435\u0431-\u044d\u043a\u0441\u0444\u0438\u043b\u044c\u0442\u0440\u0430\u0446\u0438\u044f",
+          "techniques": [
+            "T1052.001",
+            "T1041"
+          ],
+          "samples": 1000,
+          "mean_mitre_probability": 0.8030229210853577,
+          "mean_feature_std": 209.8269805908203,
+          "distinct_final_days": 1000
+        },
+        "2": {
+          "name": "\u041f\u043e\u0438\u0441\u043a \u0440\u0430\u0431\u043e\u0442\u044b \u0438 \u043a\u0440\u0430\u0436\u0430 \u0447\u0435\u0440\u0435\u0437 USB",
+          "techniques": [
+            "T1052.001",
+            "T1041"
+          ],
+          "samples": 1000,
+          "mean_mitre_probability": 0.8321350812911987,
+          "mean_feature_std": 303.9052734375,
+          "distinct_final_days": 1000
+        },
+        "3": {
+          "name": "\u041a\u043e\u043c\u043f\u0440\u043e\u043c\u0435\u0442\u0430\u0446\u0438\u044f \u0443\u0447\u0451\u0442\u043d\u043e\u0439 \u0437\u0430\u043f\u0438\u0441\u0438 \u0438 \u043c\u0430\u0441\u0441\u043e\u0432\u0430\u044f \u043f\u043e\u0447\u0442\u0430",
+          "techniques": [
+            "T1056.001",
+            "T1078",
+            "T1114"
+          ],
+          "samples": 1000,
+          "mean_mitre_probability": 0.8361611366271973,
+          "mean_feature_std": 1779783.625,
+          "distinct_final_days": 1000
+        },
+        "4": {
+          "name": "\u041f\u043e\u0438\u0441\u043a \u0444\u0430\u0439\u043b\u043e\u0432 \u0438 \u0432\u044b\u0432\u043e\u0434 \u0447\u0435\u0440\u0435\u0437 \u0432\u043d\u0435\u0448\u043d\u044e\u044e \u043f\u043e\u0447\u0442\u0443",
+          "techniques": [
+            "T1078",
+            "T1083",
+            "T1114"
+          ],
+          "samples": 1000,
+          "mean_mitre_probability": 0.8737524747848511,
+          "mean_feature_std": 2148777.25,
+          "distinct_final_days": 1000
+        }
+      }
+    },
+    {
+      "real_anomalies_per_scenario": 15,
+      "real_anomalies_total": 55,
+      "normal_training_windows": 50000,
+      "synthetic_training_windows": 4000,
+      "synthetic_positive_weight_share": 0.25,
+      "without_augmentation": {
+        "samples": 113914,
+        "anomalies": 227,
+        "pr_auc": 0.04694330254497943,
+        "roc_auc": 0.9621878975310099,
+        "recall_at_50": 0.02643171806167401,
+        "precision_at_50": 0.12,
+        "recall_at_100": 0.05726872246696035,
+        "precision_at_100": 0.13,
+        "recall_at_500": 0.1277533039647577,
+        "precision_at_500": 0.058
+      },
+      "with_gan_mitre_augmentation": {
+        "samples": 113914,
+        "anomalies": 227,
+        "pr_auc": 0.1141276390819225,
+        "roc_auc": 0.9770389556704282,
+        "recall_at_50": 0.00881057268722467,
+        "precision_at_50": 0.04,
+        "recall_at_100": 0.03524229074889868,
+        "precision_at_100": 0.08,
+        "recall_at_500": 0.3876651982378855,
+        "precision_at_500": 0.176
+      },
+      "relative_pr_auc_gain": 1.4311804431008959,
+      "scenario_recall_without": {
+        "1": {
+          "events": 6,
+          "recall_at_100": 0.3333333333333333,
+          "recall_at_500": 0.3333333333333333
+        },
+        "2": {
+          "events": 162,
+          "recall_at_100": 0.0,
+          "recall_at_500": 0.030864197530864196
+        },
+        "3": {
+          "events": 2,
+          "recall_at_100": 0.0,
+          "recall_at_500": 0.5
+        },
+        "4": {
+          "events": 57,
+          "recall_at_100": 0.19298245614035087,
+          "recall_at_500": 0.3684210526315789
+        }
+      },
+      "scenario_recall_with": {
+        "1": {
+          "events": 6,
+          "recall_at_100": 0.0,
+          "recall_at_500": 1.0
+        },
+        "2": {
+          "events": 162,
+          "recall_at_100": 0.0,
+          "recall_at_500": 0.2777777777777778
+        },
+        "3": {
+          "events": 2,
+          "recall_at_100": 0.5,
+          "recall_at_500": 0.5
+        },
+        "4": {
+          "events": 57,
+          "recall_at_100": 0.12280701754385964,
+          "recall_at_500": 0.631578947368421
+        }
+      },
+      "synthetic_quality": {
+        "1": {
+          "name": "USB \u0438 \u0432\u0435\u0431-\u044d\u043a\u0441\u0444\u0438\u043b\u044c\u0442\u0440\u0430\u0446\u0438\u044f",
+          "techniques": [
+            "T1052.001",
+            "T1041"
+          ],
+          "samples": 1000,
+          "mean_mitre_probability": 0.7924284934997559,
+          "mean_feature_std": 241.8772430419922,
+          "distinct_final_days": 1000
+        },
+        "2": {
+          "name": "\u041f\u043e\u0438\u0441\u043a \u0440\u0430\u0431\u043e\u0442\u044b \u0438 \u043a\u0440\u0430\u0436\u0430 \u0447\u0435\u0440\u0435\u0437 USB",
+          "techniques": [
+            "T1052.001",
+            "T1041"
+          ],
+          "samples": 1000,
+          "mean_mitre_probability": 0.8897070288658142,
+          "mean_feature_std": 406.3441467285156,
+          "distinct_final_days": 1000
+        },
+        "3": {
+          "name": "\u041a\u043e\u043c\u043f\u0440\u043e\u043c\u0435\u0442\u0430\u0446\u0438\u044f \u0443\u0447\u0451\u0442\u043d\u043e\u0439 \u0437\u0430\u043f\u0438\u0441\u0438 \u0438 \u043c\u0430\u0441\u0441\u043e\u0432\u0430\u044f \u043f\u043e\u0447\u0442\u0430",
+          "techniques": [
+            "T1056.001",
+            "T1078",
+            "T1114"
+          ],
+          "samples": 1000,
+          "mean_mitre_probability": 0.8272151947021484,
+          "mean_feature_std": 1798801.625,
+          "distinct_final_days": 1000
+        },
+        "4": {
+          "name": "\u041f\u043e\u0438\u0441\u043a \u0444\u0430\u0439\u043b\u043e\u0432 \u0438 \u0432\u044b\u0432\u043e\u0434 \u0447\u0435\u0440\u0435\u0437 \u0432\u043d\u0435\u0448\u043d\u044e\u044e \u043f\u043e\u0447\u0442\u0443",
+          "techniques": [
+            "T1078",
+            "T1083",
+            "T1114"
+          ],
+          "samples": 1000,
+          "mean_mitre_probability": 0.8210002183914185,
+          "mean_feature_std": 2116073.0,
+          "distinct_final_days": 1000
+        }
+      }
+    },
+    {
+      "real_anomalies_per_scenario": 20,
+      "real_anomalies_total": 70,
+      "normal_training_windows": 50000,
+      "synthetic_training_windows": 4000,
+      "synthetic_positive_weight_share": 0.25,
+      "without_augmentation": {
+        "samples": 113914,
+        "anomalies": 227,
+        "pr_auc": 0.07085178482497148,
+        "roc_auc": 0.9746942383619234,
+        "recall_at_50": 0.02643171806167401,
+        "precision_at_50": 0.12,
+        "recall_at_100": 0.039647577092511016,
+        "precision_at_100": 0.09,
+        "recall_at_500": 0.2422907488986784,
+        "precision_at_500": 0.11
+      },
+      "with_gan_mitre_augmentation": {
+        "samples": 113914,
+        "anomalies": 227,
+        "pr_auc": 0.12872790521798025,
+        "roc_auc": 0.983989699828523,
+        "recall_at_50": 0.022026431718061675,
+        "precision_at_50": 0.1,
+        "recall_at_100": 0.06167400881057269,
+        "precision_at_100": 0.14,
+        "recall_at_500": 0.4801762114537445,
+        "precision_at_500": 0.218
+      },
+      "relative_pr_auc_gain": 0.8168618551527373,
+      "scenario_recall_without": {
+        "1": {
+          "events": 6,
+          "recall_at_100": 0.0,
+          "recall_at_500": 0.3333333333333333
+        },
+        "2": {
+          "events": 162,
+          "recall_at_100": 0.0,
+          "recall_at_500": 0.2222222222222222
+        },
+        "3": {
+          "events": 2,
+          "recall_at_100": 0.5,
+          "recall_at_500": 0.5
+        },
+        "4": {
+          "events": 57,
+          "recall_at_100": 0.14035087719298245,
+          "recall_at_500": 0.2807017543859649
+        }
+      },
+      "scenario_recall_with": {
+        "1": {
+          "events": 6,
+          "recall_at_100": 0.3333333333333333,
+          "recall_at_500": 0.8333333333333334
+        },
+        "2": {
+          "events": 162,
+          "recall_at_100": 0.0,
+          "recall_at_500": 0.4506172839506173
+        },
+        "3": {
+          "events": 2,
+          "recall_at_100": 0.0,
+          "recall_at_500": 0.5
+        },
+        "4": {
+          "events": 57,
+          "recall_at_100": 0.21052631578947367,
+          "recall_at_500": 0.5263157894736842
+        }
+      },
+      "synthetic_quality": {
+        "1": {
+          "name": "USB \u0438 \u0432\u0435\u0431-\u044d\u043a\u0441\u0444\u0438\u043b\u044c\u0442\u0440\u0430\u0446\u0438\u044f",
+          "techniques": [
+            "T1052.001",
+            "T1041"
+          ],
+          "samples": 1000,
+          "mean_mitre_probability": 0.7995099425315857,
+          "mean_feature_std": 333.22113037109375,
+          "distinct_final_days": 1000
+        },
+        "2": {
+          "name": "\u041f\u043e\u0438\u0441\u043a \u0440\u0430\u0431\u043e\u0442\u044b \u0438 \u043a\u0440\u0430\u0436\u0430 \u0447\u0435\u0440\u0435\u0437 USB",
+          "techniques": [
+            "T1052.001",
+            "T1041"
+          ],
+          "samples": 1000,
+          "mean_mitre_probability": 0.879652202129364,
+          "mean_feature_std": 470.9693603515625,
+          "distinct_final_days": 1000
+        },
+        "3": {
+          "name": "\u041a\u043e\u043c\u043f\u0440\u043e\u043c\u0435\u0442\u0430\u0446\u0438\u044f \u0443\u0447\u0451\u0442\u043d\u043e\u0439 \u0437\u0430\u043f\u0438\u0441\u0438 \u0438 \u043c\u0430\u0441\u0441\u043e\u0432\u0430\u044f \u043f\u043e\u0447\u0442\u0430",
+          "techniques": [
+            "T1056.001",
+            "T1078",
+            "T1114"
+          ],
+          "samples": 1000,
+          "mean_mitre_probability": 0.8334301114082336,
+          "mean_feature_std": 1752486.875,
+          "distinct_final_days": 1000
+        },
+        "4": {
+          "name": "\u041f\u043e\u0438\u0441\u043a \u0444\u0430\u0439\u043b\u043e\u0432 \u0438 \u0432\u044b\u0432\u043e\u0434 \u0447\u0435\u0440\u0435\u0437 \u0432\u043d\u0435\u0448\u043d\u044e\u044e \u043f\u043e\u0447\u0442\u0443",
+          "techniques": [
+            "T1078",
+            "T1083",
+            "T1114"
+          ],
+          "samples": 1000,
+          "mean_mitre_probability": 0.8459247946739197,
+          "mean_feature_std": 2212873.5,
+          "distinct_final_days": 1000
+        }
+      }
+    }
+  ],
+  "best_shots": 20,
+  "elapsed_seconds": 32.20186901092529
+}

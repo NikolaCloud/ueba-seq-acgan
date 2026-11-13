@@ -1,0 +1,404 @@
+{
+  "scope": "validation-only model selection; test was not read",
+  "split": "validation",
+  "budgets": [
+    50,
+    100,
+    500
+  ],
+  "models": {
+    "mitre_augmented": {
+      "artifact_dir": "artifacts\\r5.2_mitre_augmented_seq_acgan",
+      "overall": {
+        "events": 113914,
+        "anomalies": 227,
+        "pr_auc": 0.009978423574941084,
+        "roc_auc": 0.8399485541665541,
+        "alert_budgets": {
+          "50": {
+            "alerts": 50,
+            "true_anomalies": 0,
+            "precision": 0.0,
+            "recall": 0.0
+          },
+          "100": {
+            "alerts": 100,
+            "true_anomalies": 2,
+            "precision": 0.02,
+            "recall": 0.00881057268722467
+          },
+          "500": {
+            "alerts": 500,
+            "true_anomalies": 7,
+            "precision": 0.014,
+            "recall": 0.030837004405286344
+          }
+        }
+      },
+      "real_cert_scenarios": {
+        "1": {
+          "anomalies": 6,
+          "mean_score": 0.7399934052877294,
+          "recall": {
+            "50": 0.0,
+            "100": 0.16666666666666666,
+            "500": 0.6666666666666666
+          }
+        },
+        "2": {
+          "anomalies": 162,
+          "mean_score": 0.1455438428586598,
+          "recall": {
+            "50": 0.0,
+            "100": 0.0,
+            "500": 0.0
+          }
+        },
+        "3": {
+          "anomalies": 2,
+          "mean_score": 0.9221955239772797,
+          "recall": {
+            "50": 0.0,
+            "100": 0.5,
+            "500": 0.5
+          }
+        },
+        "4": {
+          "anomalies": 57,
+          "mean_score": 0.3008856159701776,
+          "recall": {
+            "50": 0.0,
+            "100": 0.0,
+            "500": 0.03508771929824561
+          }
+        }
+      },
+      "monthly": {
+        "2010-12": {
+          "events": 57282,
+          "anomalies": 123,
+          "pr_auc": 0.010874673757355204,
+          "roc_auc": 0.8344057234725499,
+          "alert_budgets": {
+            "50": {
+              "alerts": 50,
+              "true_anomalies": 1,
+              "precision": 0.02,
+              "recall": 0.008130081300813009
+            },
+            "100": {
+              "alerts": 100,
+              "true_anomalies": 1,
+              "precision": 0.01,
+              "recall": 0.008130081300813009
+            },
+            "500": {
+              "alerts": 500,
+              "true_anomalies": 4,
+              "precision": 0.008,
+              "recall": 0.032520325203252036
+            }
+          }
+        },
+        "2011-01": {
+          "events": 56632,
+          "anomalies": 104,
+          "pr_auc": 0.009779774505245885,
+          "roc_auc": 0.8495303212567225,
+          "alert_budgets": {
+            "50": {
+              "alerts": 50,
+              "true_anomalies": 1,
+              "precision": 0.02,
+              "recall": 0.009615384615384616
+            },
+            "100": {
+              "alerts": 100,
+              "true_anomalies": 2,
+              "precision": 0.02,
+              "recall": 0.019230769230769232
+            },
+            "500": {
+              "alerts": 500,
+              "true_anomalies": 9,
+              "precision": 0.018,
+              "recall": 0.08653846153846154
+            }
+          }
+        }
+      },
+      "top_500_false_positives": {
+        "budget": 500,
+        "role_counts": {
+          "Salesman": 99,
+          "ProductionLineWorker": 59,
+          "Technician": 47,
+          "ElectricalEngineer": 33,
+          "AdministrativeAssistant": 30,
+          "Manager": 23,
+          "SecurityGuard": 17,
+          "Scientist": 17,
+          "Mathematician": 16,
+          "StockroomClerk": 16,
+          "WebDeveloper": 14,
+          "MechanicalEngineer": 12,
+          "TestEngineer": 10,
+          "Director": 10,
+          "SoftwareDeveloper": 9
+        },
+        "user_counts": {
+          "OHC1798": 8,
+          "SFA1912": 8,
+          "CAM0158": 8,
+          "YJB0171": 8,
+          "RAH0609": 8,
+          "CDB1594": 7,
+          "SEL1062": 6,
+          "HGS0888": 6,
+          "NZH1839": 5,
+          "SJP1023": 5,
+          "NIM1282": 5,
+          "KCM0402": 5,
+          "KMC1934": 5,
+          "DEB0727": 5,
+          "BDC0936": 5
+        },
+        "activity_feature_lift": [
+          {
+            "feature": "after_hours_events",
+            "standardised_mean_difference": 4.07362071497199
+          },
+          {
+            "feature": "file_events",
+            "standardised_mean_difference": 1.767157743045649
+          },
+          {
+            "feature": "file_content_chars",
+            "standardised_mean_difference": 1.7646806708201817
+          },
+          {
+            "feature": "logon_count",
+            "standardised_mean_difference": 1.116532034021089
+          },
+          {
+            "feature": "logon_events",
+            "standardised_mean_difference": 0.8925322595912808
+          },
+          {
+            "feature": "email_external",
+            "standardised_mean_difference": 0.7647047170636557
+          },
+          {
+            "feature": "email_events",
+            "standardised_mean_difference": 0.7257863060629712
+          },
+          {
+            "feature": "http_events",
+            "standardised_mean_difference": 0.6295965652160466
+          }
+        ],
+        "note": "Feature lift describes top false-positive activity; it is not model attribution."
+      }
+    },
+    "temporal_mitre": {
+      "artifact_dir": "artifacts\\r5.2_temporal_mitre_seq_acgan",
+      "overall": {
+        "events": 113914,
+        "anomalies": 227,
+        "pr_auc": 0.010337809862574682,
+        "roc_auc": 0.8190972710489721,
+        "alert_budgets": {
+          "50": {
+            "alerts": 50,
+            "true_anomalies": 2,
+            "precision": 0.04,
+            "recall": 0.00881057268722467
+          },
+          "100": {
+            "alerts": 100,
+            "true_anomalies": 2,
+            "precision": 0.02,
+            "recall": 0.00881057268722467
+          },
+          "500": {
+            "alerts": 500,
+            "true_anomalies": 7,
+            "precision": 0.014,
+            "recall": 0.030837004405286344
+          }
+        }
+      },
+      "real_cert_scenarios": {
+        "1": {
+          "anomalies": 6,
+          "mean_score": 0.3150731027126312,
+          "recall": {
+            "50": 0.16666666666666666,
+            "100": 0.16666666666666666,
+            "500": 0.3333333333333333
+          }
+        },
+        "2": {
+          "anomalies": 162,
+          "mean_score": 0.05327763380827727,
+          "recall": {
+            "50": 0.0,
+            "100": 0.0,
+            "500": 0.018518518518518517
+          }
+        },
+        "3": {
+          "anomalies": 2,
+          "mean_score": 0.4671681821346283,
+          "recall": {
+            "50": 0.0,
+            "100": 0.0,
+            "500": 0.5
+          }
+        },
+        "4": {
+          "anomalies": 57,
+          "mean_score": 0.019322588778378672,
+          "recall": {
+            "50": 0.017543859649122806,
+            "100": 0.017543859649122806,
+            "500": 0.017543859649122806
+          }
+        }
+      },
+      "monthly": {
+        "2010-12": {
+          "events": 57282,
+          "anomalies": 123,
+          "pr_auc": 0.01106833643112603,
+          "roc_auc": 0.838056927779691,
+          "alert_budgets": {
+            "50": {
+              "alerts": 50,
+              "true_anomalies": 0,
+              "precision": 0.0,
+              "recall": 0.0
+            },
+            "100": {
+              "alerts": 100,
+              "true_anomalies": 0,
+              "precision": 0.0,
+              "recall": 0.0
+            },
+            "500": {
+              "alerts": 500,
+              "true_anomalies": 6,
+              "precision": 0.012,
+              "recall": 0.04878048780487805
+            }
+          }
+        },
+        "2011-01": {
+          "events": 56632,
+          "anomalies": 104,
+          "pr_auc": 0.014478592922465085,
+          "roc_auc": 0.7960893104030133,
+          "alert_budgets": {
+            "50": {
+              "alerts": 50,
+              "true_anomalies": 2,
+              "precision": 0.04,
+              "recall": 0.019230769230769232
+            },
+            "100": {
+              "alerts": 100,
+              "true_anomalies": 2,
+              "precision": 0.02,
+              "recall": 0.019230769230769232
+            },
+            "500": {
+              "alerts": 500,
+              "true_anomalies": 5,
+              "precision": 0.01,
+              "recall": 0.04807692307692308
+            }
+          }
+        }
+      },
+      "top_500_false_positives": {
+        "budget": 500,
+        "role_counts": {
+          "Technician": 162,
+          "Salesman": 72,
+          "ProductionLineWorker": 58,
+          "Physicist": 25,
+          "Mathematician": 21,
+          "ElectricalEngineer": 19,
+          "VicePresident": 14,
+          "Scientist": 11,
+          "ITAdmin": 11,
+          "StockroomClerk": 10,
+          "AdministrativeAssistant": 10,
+          "WebDeveloper": 10,
+          "SoftwareEngineer": 9,
+          "Manager": 9,
+          "SecurityGuard": 8
+        },
+        "user_counts": {
+          "NVA1748": 47,
+          "KHG0205": 36,
+          "WTC0699": 22,
+          "PMM1117": 17,
+          "BCC1597": 14,
+          "NJB0011": 11,
+          "TCL0855": 9,
+          "HRR1154": 9,
+          "GGM1604": 9,
+          "MAF0293": 7,
+          "LSB1588": 7,
+          "CBD1574": 7,
+          "KAG0566": 6,
+          "USW1994": 6,
+          "WLP0123": 6
+        },
+        "activity_feature_lift": [
+          {
+            "feature": "device_events",
+            "standardised_mean_difference": 3.7961957091216605
+          },
+          {
+            "feature": "device_connect",
+            "standardised_mean_difference": 3.7939255220704595
+          },
+          {
+            "feature": "file_content_chars",
+            "standardised_mean_difference": 3.4243344880700897
+          },
+          {
+            "feature": "file_events",
+            "standardised_mean_difference": 3.3808579460356327
+          },
+          {
+            "feature": "after_hours_events",
+            "standardised_mean_difference": 2.228388289952186
+          },
+          {
+            "feature": "weekend_events",
+            "standardised_mean_difference": 0.9407669725131852
+          },
+          {
+            "feature": "logon_count",
+            "standardised_mean_difference": 0.6125541673602329
+          },
+          {
+            "feature": "logon_events",
+            "standardised_mean_difference": 0.5743667784239624
+          }
+        ],
+        "note": "Feature lift describes top false-positive activity; it is not model attribution."
+      }
+    }
+  },
+  "decision": {
+    "selected": "mitre_augmented",
+    "rule": "Select temporal_mitre only with >=10% relative validation PR-AUC gain and >=1 additional true anomaly at alert budget 100 or 500.",
+    "relative_pr_auc_gain": 0.036016339147611216,
+    "operational_gain": false,
+    "temporal_passes": false
+  }
+}

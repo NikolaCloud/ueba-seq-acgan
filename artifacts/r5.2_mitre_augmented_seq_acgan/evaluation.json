@@ -1,0 +1,18 @@
+{
+  "method": "normal GAN generated baseline + MITRE scenario augmented two-head Seq-ACGAN",
+  "real_anomalies_used_only_for_evaluation": true,
+  "validation": {
+    "pr_auc": 0.00997842337273305,
+    "roc_auc": 0.8399485347919277,
+    "precision_at_100": 0.02,
+    "recall_at_100": 0.00881057268722467,
+    "recall_at_500": 0.030837004405286344
+  },
+  "test": {
+    "pr_auc": 0.013126036008702147,
+    "roc_auc": 0.8555771593305619,
+    "precision_at_100": 0.04,
+    "recall_at_100": 0.011764705882352941,
+    "recall_at_500": 0.03529411764705882
+  }
+}

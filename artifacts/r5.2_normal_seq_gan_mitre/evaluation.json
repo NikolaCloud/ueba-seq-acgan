@@ -1,0 +1,23 @@
+{
+  "method": "normal-only adversarial sequence autoencoder",
+  "training_labels_used": "normal records only; no observed anomaly labels",
+  "score": "0.7 calibrated reconstruction deviation + 0.3 pseudo-anomaly discriminator probability",
+  "normal_error_calibration": {
+    "median": 0.48921050131320953,
+    "p99": 0.8109964239597321
+  },
+  "validation": {
+    "pr_auc": 0.00814415883001629,
+    "roc_auc": 0.8404884668854113,
+    "precision_at_100": 0.01,
+    "recall_at_100": 0.004405286343612335,
+    "recall_at_500": 0.030837004405286344
+  },
+  "test": {
+    "pr_auc": 0.004870449591654552,
+    "roc_auc": 0.8362497184134634,
+    "precision_at_100": 0.0,
+    "recall_at_100": 0.0,
+    "recall_at_500": 0.0029411764705882353
+  }
+}

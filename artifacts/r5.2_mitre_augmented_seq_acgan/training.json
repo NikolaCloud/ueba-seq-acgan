@@ -1,0 +1,216 @@
+{
+  "normal_windows": 40000,
+  "real_anomaly_labels_used_for_optimisation": false,
+  "normal_generator": "artifacts\\r5.2_normal_role_conditional_gan",
+  "scenario_profiles": [
+    {
+      "id": "T1052.001",
+      "name": "usb_exfiltration",
+      "features": [
+        "device_connect",
+        "file_events",
+        "file_content_chars",
+        "after_hours_events"
+      ]
+    },
+    {
+      "id": "T1078",
+      "name": "valid_account_after_hours",
+      "features": [
+        "logon_events",
+        "logon_count",
+        "after_hours_events"
+      ]
+    },
+    {
+      "id": "T1041",
+      "name": "web_exfiltration",
+      "features": [
+        "http_events",
+        "http_job_search",
+        "after_hours_events"
+      ]
+    },
+    {
+      "id": "T1114",
+      "name": "external_email_collection",
+      "features": [
+        "email_events",
+        "email_external",
+        "email_size",
+        "email_attachments"
+      ]
+    },
+    {
+      "id": "T1074",
+      "name": "data_staging",
+      "features": [
+        "file_events",
+        "file_content_chars",
+        "device_events"
+      ]
+    },
+    {
+      "id": "UEBA-BDU",
+      "name": "compound_insider_deviation",
+      "features": [
+        "after_hours_events",
+        "device_connect",
+        "file_events",
+        "email_external"
+      ]
+    }
+  ],
+  "history": [
+    {
+      "epoch": 1,
+      "loss": 2.719305240190946,
+      "source_loss": 1.3726612398257623,
+      "anomaly_loss": 1.3466440018935082
+    },
+    {
+      "epoch": 2,
+      "loss": 2.2264287051482077,
+      "source_loss": 1.1899903275263615,
+      "anomaly_loss": 1.0364383833530622
+    },
+    {
+      "epoch": 3,
+      "loss": 1.4825917245485845,
+      "source_loss": 0.8240361828834583,
+      "anomaly_loss": 0.6585555454859366
+    },
+    {
+      "epoch": 4,
+      "loss": 1.0624075787953842,
+      "source_loss": 0.592118250635954,
+      "anomaly_loss": 0.47028932663110584
+    },
+    {
+      "epoch": 5,
+      "loss": 0.7739165837948139,
+      "source_loss": 0.4337704865596233,
+      "anomaly_loss": 0.3401460979993527
+    },
+    {
+      "epoch": 6,
+      "loss": 0.5984600455715106,
+      "source_loss": 0.3336242485122803,
+      "anomaly_loss": 0.2648357973457911
+    },
+    {
+      "epoch": 7,
+      "loss": 0.5067371257986778,
+      "source_loss": 0.2775855412085851,
+      "anomaly_loss": 0.22915158497217375
+    },
+    {
+      "epoch": 8,
+      "loss": 0.4529550346808556,
+      "source_loss": 0.24438043368550447,
+      "anomaly_loss": 0.20857459937150663
+    },
+    {
+      "epoch": 9,
+      "loss": 0.4103272328009972,
+      "source_loss": 0.21948074291531855,
+      "anomaly_loss": 0.1908464872588714
+    },
+    {
+      "epoch": 10,
+      "loss": 0.3836877542810562,
+      "source_loss": 0.203406604197927,
+      "anomaly_loss": 0.18028114874584553
+    },
+    {
+      "epoch": 11,
+      "loss": 0.361847874827874,
+      "source_loss": 0.19039496497657055,
+      "anomaly_loss": 0.1714529094692224
+    },
+    {
+      "epoch": 12,
+      "loss": 0.34083500953438955,
+      "source_loss": 0.17836595479494485,
+      "anomaly_loss": 0.16246905493048522
+    },
+    {
+      "epoch": 13,
+      "loss": 0.32700162533766186,
+      "source_loss": 0.17035806303222975,
+      "anomaly_loss": 0.15664356225767198
+    },
+    {
+      "epoch": 14,
+      "loss": 0.3147826842390574,
+      "source_loss": 0.16360335639463022,
+      "anomaly_loss": 0.15117932617282256
+    },
+    {
+      "epoch": 15,
+      "loss": 0.30406205996106833,
+      "source_loss": 0.1574755822045681,
+      "anomaly_loss": 0.14658647780426037
+    },
+    {
+      "epoch": 16,
+      "loss": 0.2913725590094542,
+      "source_loss": 0.15057175969466186,
+      "anomaly_loss": 0.1408007990759917
+    },
+    {
+      "epoch": 17,
+      "loss": 0.2838074138913399,
+      "source_loss": 0.14632131374226168,
+      "anomaly_loss": 0.13748609971923706
+    },
+    {
+      "epoch": 18,
+      "loss": 0.276222392056997,
+      "source_loss": 0.1421190565213179,
+      "anomaly_loss": 0.13410333639536148
+    },
+    {
+      "epoch": 19,
+      "loss": 0.2681383572709866,
+      "source_loss": 0.13765671548361963,
+      "anomaly_loss": 0.13048164087992448
+    },
+    {
+      "epoch": 20,
+      "loss": 0.26393374389944935,
+      "source_loss": 0.1353918591944071,
+      "anomaly_loss": 0.12854188499160302
+    },
+    {
+      "epoch": 21,
+      "loss": 0.25705436798624504,
+      "source_loss": 0.13162942350101778,
+      "anomaly_loss": 0.12542494419866648
+    },
+    {
+      "epoch": 22,
+      "loss": 0.25330930451552075,
+      "source_loss": 0.12943366007545057,
+      "anomaly_loss": 0.12387564439231004
+    },
+    {
+      "epoch": 23,
+      "loss": 0.2438712150622637,
+      "source_loss": 0.12464909102672185,
+      "anomaly_loss": 0.11922212446538302
+    },
+    {
+      "epoch": 24,
+      "loss": 0.23707220841867802,
+      "source_loss": 0.12109602868365936,
+      "anomaly_loss": 0.1159761796394984
+    },
+    {
+      "epoch": 25,
+      "loss": 0.23782168319210029,
+      "source_loss": 0.12146686117809552,
+      "anomaly_loss": 0.1163548227542868
+    }
+  ]
+}

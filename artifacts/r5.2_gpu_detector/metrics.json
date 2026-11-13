@@ -1,0 +1,151 @@
+{
+  "model": "GPU XGBoost on 14-day sequence summaries",
+  "selection": "configuration and rounds selected on validation; final refit on train+validation",
+  "device": "cuda",
+  "candidates": [
+    {
+      "index": 0,
+      "parameters": {
+        "max_depth": 4,
+        "eta": 0.08,
+        "min_child_weight": 2,
+        "scale_pos_weight": 30
+      },
+      "rounds": 699,
+      "validation": {
+        "samples": 113914,
+        "anomalies": 227,
+        "pr_auc": 0.8268421552427739,
+        "roc_auc": 0.9938429374196849,
+        "recall_at_50": 0.22026431718061673,
+        "precision_at_50": 1.0,
+        "recall_at_100": 0.43612334801762115,
+        "precision_at_100": 0.99,
+        "recall_at_500": 0.8722466960352423,
+        "precision_at_500": 0.396
+      }
+    },
+    {
+      "index": 1,
+      "parameters": {
+        "max_depth": 6,
+        "eta": 0.05,
+        "min_child_weight": 2,
+        "scale_pos_weight": 30
+      },
+      "rounds": 14,
+      "validation": {
+        "samples": 113914,
+        "anomalies": 227,
+        "pr_auc": 0.6235955084093318,
+        "roc_auc": 0.8981754100416907,
+        "recall_at_50": 0.22026431718061673,
+        "precision_at_50": 1.0,
+        "recall_at_100": 0.3744493392070485,
+        "precision_at_100": 0.85,
+        "recall_at_500": 0.7312775330396476,
+        "precision_at_500": 0.332
+      }
+    },
+    {
+      "index": 2,
+      "parameters": {
+        "max_depth": 4,
+        "eta": 0.05,
+        "min_child_weight": 5,
+        "scale_pos_weight": 100
+      },
+      "rounds": 699,
+      "validation": {
+        "samples": 113914,
+        "anomalies": 227,
+        "pr_auc": 0.8284612169539235,
+        "roc_auc": 0.9935139562603855,
+        "recall_at_50": 0.22026431718061673,
+        "precision_at_50": 1.0,
+        "recall_at_100": 0.42731277533039647,
+        "precision_at_100": 0.97,
+        "recall_at_500": 0.8678414096916299,
+        "precision_at_500": 0.394
+      }
+    },
+    {
+      "index": 3,
+      "parameters": {
+        "max_depth": 6,
+        "eta": 0.05,
+        "min_child_weight": 5,
+        "scale_pos_weight": 100
+      },
+      "rounds": 697,
+      "validation": {
+        "samples": 113914,
+        "anomalies": 227,
+        "pr_auc": 0.8365761747545435,
+        "roc_auc": 0.9922900029755551,
+        "recall_at_50": 0.22026431718061673,
+        "precision_at_50": 1.0,
+        "recall_at_100": 0.43171806167400884,
+        "precision_at_100": 0.98,
+        "recall_at_500": 0.8722466960352423,
+        "precision_at_500": 0.396
+      }
+    },
+    {
+      "index": 4,
+      "parameters": {
+        "max_depth": 8,
+        "eta": 0.03,
+        "min_child_weight": 5,
+        "scale_pos_weight": 30
+      },
+      "rounds": 7,
+      "validation": {
+        "samples": 113914,
+        "anomalies": 227,
+        "pr_auc": 0.6306708843435173,
+        "roc_auc": 0.9823015498655032,
+        "recall_at_50": 0.22026431718061673,
+        "precision_at_50": 1.0,
+        "recall_at_100": 0.3568281938325991,
+        "precision_at_100": 0.81,
+        "recall_at_500": 0.748898678414097,
+        "precision_at_500": 0.34
+      }
+    }
+  ],
+  "selected_parameters": {
+    "max_depth": 6,
+    "eta": 0.05,
+    "min_child_weight": 5,
+    "scale_pos_weight": 100
+  },
+  "selected_rounds": 697,
+  "validation_selected_threshold": 0.1482359915971756,
+  "validation_best_f1": 0.8044444444444444,
+  "final_train_validation": {
+    "samples": 730454,
+    "anomalies": 967,
+    "pr_auc": 1.0,
+    "roc_auc": 1.0,
+    "recall_at_50": 0.05170630816959669,
+    "precision_at_50": 1.0,
+    "recall_at_100": 0.10341261633919338,
+    "precision_at_100": 1.0,
+    "recall_at_500": 0.5170630816959669,
+    "precision_at_500": 1.0
+  },
+  "test": {
+    "samples": 216813,
+    "anomalies": 340,
+    "pr_auc": 0.8910392179376473,
+    "roc_auc": 0.9943632013882454,
+    "recall_at_50": 0.14705882352941177,
+    "precision_at_50": 1.0,
+    "recall_at_100": 0.29411764705882354,
+    "precision_at_100": 1.0,
+    "recall_at_500": 0.888235294117647,
+    "precision_at_500": 0.604
+  },
+  "elapsed_seconds": 39.57531452178955
+}

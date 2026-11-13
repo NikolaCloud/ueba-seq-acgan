@@ -1,0 +1,143 @@
+{
+  "protocol": "six deterministic seeds; same train-only low-shot protocol; unchanged validation",
+  "seeds": [
+    42,
+    40,
+    41,
+    43,
+    44,
+    45
+  ],
+  "aggregate": [
+    {
+      "real_anomalies_per_scenario": 1,
+      "runs": 6,
+      "mean_pr_auc_without": 0.036950100273019745,
+      "mean_pr_auc_with_gan": 0.0456006525604383,
+      "mean_relative_pr_auc_gain": 0.2341144468756698,
+      "median_relative_pr_auc_gain": 0.42009140418337637,
+      "runs_improved": 5,
+      "mean_recall_at_500_without": 0.09838472834067548,
+      "mean_recall_at_500_with_gan": 0.11600587371512482,
+      "mean_pr_auc_without_std": 0.04483273143428658,
+      "mean_pr_auc_with_gan_std": 0.040541490534053655
+    },
+    {
+      "real_anomalies_per_scenario": 3,
+      "runs": 6,
+      "mean_pr_auc_without": 0.03684831987188377,
+      "mean_pr_auc_with_gan": 0.06799024246630803,
+      "mean_relative_pr_auc_gain": 0.8451381963329718,
+      "median_relative_pr_auc_gain": 0.7934659271318454,
+      "runs_improved": 6,
+      "mean_recall_at_500_without": 0.14464023494860498,
+      "mean_recall_at_500_with_gan": 0.17547723935389134,
+      "mean_pr_auc_without_std": 0.02439753167622686,
+      "mean_pr_auc_with_gan_std": 0.039174348111104394
+    },
+    {
+      "real_anomalies_per_scenario": 5,
+      "runs": 6,
+      "mean_pr_auc_without": 0.04334355002119993,
+      "mean_pr_auc_with_gan": 0.06674961835030695,
+      "mean_relative_pr_auc_gain": 0.540012719716285,
+      "median_relative_pr_auc_gain": 0.6963629843706646,
+      "runs_improved": 5,
+      "mean_recall_at_500_without": 0.10279001468428782,
+      "mean_recall_at_500_with_gan": 0.1527165932452276,
+      "mean_pr_auc_without_std": 0.016596032922984123,
+      "mean_pr_auc_with_gan_std": 0.023054844732672792
+    },
+    {
+      "real_anomalies_per_scenario": 10,
+      "runs": 6,
+      "mean_pr_auc_without": 0.04854766680984925,
+      "mean_pr_auc_with_gan": 0.09943113240126249,
+      "mean_relative_pr_auc_gain": 1.0481135126578338,
+      "median_relative_pr_auc_gain": 1.036431718400381,
+      "runs_improved": 6,
+      "mean_recall_at_500_without": 0.118208516886931,
+      "mean_recall_at_500_with_gan": 0.31130690161527164,
+      "mean_pr_auc_without_std": 0.009280807800921834,
+      "mean_pr_auc_with_gan_std": 0.02563156293385711
+    },
+    {
+      "real_anomalies_per_scenario": 15,
+      "runs": 6,
+      "mean_pr_auc_without": 0.058098448512279466,
+      "mean_pr_auc_with_gan": 0.09777417767320708,
+      "mean_relative_pr_auc_gain": 0.6829051407894636,
+      "median_relative_pr_auc_gain": 0.7729479621053987,
+      "runs_improved": 6,
+      "mean_recall_at_500_without": 0.13582966226138032,
+      "mean_recall_at_500_with_gan": 0.25917767988252566,
+      "mean_pr_auc_without_std": 0.011089227741035488,
+      "mean_pr_auc_with_gan_std": 0.01253995053404031
+    },
+    {
+      "real_anomalies_per_scenario": 20,
+      "runs": 6,
+      "mean_pr_auc_without": 0.07071120412229658,
+      "mean_pr_auc_with_gan": 0.11446722570103186,
+      "mean_relative_pr_auc_gain": 0.6187989883902739,
+      "median_relative_pr_auc_gain": 0.6908157610535651,
+      "runs_improved": 6,
+      "mean_recall_at_500_without": 0.2393538913362702,
+      "mean_recall_at_500_with_gan": 0.3259911894273128,
+      "mean_pr_auc_without_std": 0.013376676381034285,
+      "mean_pr_auc_with_gan_std": 0.02380778399717392
+    },
+    {
+      "real_anomalies_per_scenario": 50,
+      "runs": 1,
+      "mean_pr_auc_without": 0.061159871,
+      "mean_pr_auc_with_gan": 0.115629402,
+      "mean_relative_pr_auc_gain": 0.890609,
+      "median_relative_pr_auc_gain": 0.890609,
+      "runs_improved": 1,
+      "mean_recall_at_500_without": 0.241,
+      "mean_recall_at_500_with_gan": 0.369,
+      "mean_pr_auc_without_std": 0.0,
+      "mean_pr_auc_with_gan_std": 0.0
+    },
+    {
+      "real_anomalies_per_scenario": 100,
+      "runs": 1,
+      "mean_pr_auc_without": 0.083624891,
+      "mean_pr_auc_with_gan": 0.058321456,
+      "mean_relative_pr_auc_gain": -0.302582,
+      "median_relative_pr_auc_gain": -0.302582,
+      "runs_improved": 0,
+      "mean_recall_at_500_without": 0.285,
+      "mean_recall_at_500_with_gan": 0.201,
+      "mean_pr_auc_without_std": 0.0,
+      "mean_pr_auc_with_gan_std": 0.0
+    },
+    {
+      "real_anomalies_per_scenario": 150,
+      "runs": 1,
+      "mean_pr_auc_without": 0.038841235,
+      "mean_pr_auc_with_gan": 0.056094128,
+      "mean_relative_pr_auc_gain": 0.44419,
+      "median_relative_pr_auc_gain": 0.44419,
+      "runs_improved": 1,
+      "mean_recall_at_500_without": 0.162,
+      "mean_recall_at_500_with_gan": 0.224,
+      "mean_pr_auc_without_std": 0.0,
+      "mean_pr_auc_with_gan_std": 0.0
+    },
+    {
+      "real_anomalies_per_scenario": 185,
+      "runs": 1,
+      "mean_pr_auc_without": 0.044837129,
+      "mean_pr_auc_with_gan": 0.053862914,
+      "mean_relative_pr_auc_gain": 0.201302,
+      "median_relative_pr_auc_gain": 0.201302,
+      "runs_improved": 1,
+      "mean_recall_at_500_without": 0.181,
+      "mean_recall_at_500_with_gan": 0.218,
+      "mean_pr_auc_without_std": 0.0,
+      "mean_pr_auc_with_gan_std": 0.0
+    }
+  ]
+}

@@ -1,0 +1,253 @@
+{
+  "profiles": [
+    {
+      "id": "T1052.001",
+      "name": "usb_exfiltration",
+      "stages": [
+        {
+          "days": 4,
+          "features": [
+            "file_events",
+            "file_content_chars"
+          ]
+        },
+        {
+          "days": 2,
+          "features": [
+            "device_connect",
+            "device_events",
+            "after_hours_events"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "T1078",
+      "name": "valid_account_after_hours",
+      "stages": [
+        {
+          "days": 4,
+          "features": [
+            "logon_events",
+            "logon_count",
+            "after_hours_events"
+          ]
+        },
+        {
+          "days": 2,
+          "features": [
+            "device_events",
+            "file_events",
+            "after_hours_events"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "T1041",
+      "name": "web_exfiltration",
+      "stages": [
+        {
+          "days": 4,
+          "features": [
+            "file_events",
+            "file_content_chars"
+          ]
+        },
+        {
+          "days": 2,
+          "features": [
+            "http_events",
+            "http_job_search",
+            "after_hours_events"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "T1114",
+      "name": "external_email_collection",
+      "stages": [
+        {
+          "days": 4,
+          "features": [
+            "email_events",
+            "email_attachments"
+          ]
+        },
+        {
+          "days": 2,
+          "features": [
+            "email_external",
+            "email_size",
+            "after_hours_events"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "T1074",
+      "name": "data_staging",
+      "stages": [
+        {
+          "days": 5,
+          "features": [
+            "file_events",
+            "file_content_chars"
+          ]
+        },
+        {
+          "days": 2,
+          "features": [
+            "device_events",
+            "device_connect"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "UEBA-BDU",
+      "name": "compound_insider_deviation",
+      "stages": [
+        {
+          "days": 5,
+          "features": [
+            "after_hours_events",
+            "file_events"
+          ]
+        },
+        {
+          "days": 3,
+          "features": [
+            "device_connect",
+            "email_external",
+            "file_content_chars"
+          ]
+        }
+      ]
+    }
+  ],
+  "real_anomaly_labels_used_for_optimisation": false,
+  "history": [
+    {
+      "epoch": 1,
+      "loss": 4.653382065968636
+    },
+    {
+      "epoch": 2,
+      "loss": 4.15495997055983
+    },
+    {
+      "epoch": 3,
+      "loss": 2.9225053573266053
+    },
+    {
+      "epoch": 4,
+      "loss": 2.139511242126807
+    },
+    {
+      "epoch": 5,
+      "loss": 1.739645663744364
+    },
+    {
+      "epoch": 6,
+      "loss": 1.3983495296576085
+    },
+    {
+      "epoch": 7,
+      "loss": 1.1062842061122258
+    },
+    {
+      "epoch": 8,
+      "loss": 0.8676425803166169
+    },
+    {
+      "epoch": 9,
+      "loss": 0.6783605607656332
+    },
+    {
+      "epoch": 10,
+      "loss": 0.5485095937664692
+    },
+    {
+      "epoch": 11,
+      "loss": 0.44640921189998967
+    },
+    {
+      "epoch": 12,
+      "loss": 0.37619870003217304
+    },
+    {
+      "epoch": 13,
+      "loss": 0.32682326464698863
+    },
+    {
+      "epoch": 14,
+      "loss": 0.2839795101720553
+    },
+    {
+      "epoch": 15,
+      "loss": 0.2548278445998828
+    },
+    {
+      "epoch": 16,
+      "loss": 0.2302399130585866
+    },
+    {
+      "epoch": 17,
+      "loss": 0.20842702127993107
+    },
+    {
+      "epoch": 18,
+      "loss": 0.18853099868656734
+    },
+    {
+      "epoch": 19,
+      "loss": 0.1774994501223167
+    },
+    {
+      "epoch": 20,
+      "loss": 0.16649153016698667
+    },
+    {
+      "epoch": 21,
+      "loss": 0.1501519113110426
+    },
+    {
+      "epoch": 22,
+      "loss": 0.1414368683949877
+    },
+    {
+      "epoch": 23,
+      "loss": 0.1342217188137464
+    },
+    {
+      "epoch": 24,
+      "loss": 0.1279503524494477
+    },
+    {
+      "epoch": 25,
+      "loss": 0.1191702788361372
+    },
+    {
+      "epoch": 26,
+      "loss": 0.11325081946471563
+    },
+    {
+      "epoch": 27,
+      "loss": 0.10472710934491494
+    },
+    {
+      "epoch": 28,
+      "loss": 0.09905181197115244
+    },
+    {
+      "epoch": 29,
+      "loss": 0.09666515005609164
+    },
+    {
+      "epoch": 30,
+      "loss": 0.0900275447549155
+    }
+  ]
+}

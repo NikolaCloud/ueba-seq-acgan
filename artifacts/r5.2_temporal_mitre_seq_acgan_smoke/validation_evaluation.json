@@ -1,0 +1,10 @@
+{
+  "split": "validation",
+  "metrics": {
+    "pr_auc": 0.005161465523612746,
+    "roc_auc": 0.7194976632069138,
+    "precision_at_100": 0.0,
+    "recall_at_100": 0.0,
+    "recall_at_500": 0.0
+  }
+}
